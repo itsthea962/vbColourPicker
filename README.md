@@ -4,7 +4,7 @@ Has all the basic feautres such as RGB, HEX, magnifier (including zoom), colour 
 
 More feautres are being added throughout time. 
 
-Feel free to test it out the latest beta or use the latest stable version.
+Feel free to test out the latest beta or use the latest stable version.
 
 https://github.com/theo3334/vbColourPicker/releases/ has the releases, including stable and the latest beta.
 
