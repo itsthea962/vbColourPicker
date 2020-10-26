@@ -67,49 +67,48 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property windowsizeHEIGHT() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property windowsizeHeight() As Integer
             Get
-                Return CType(Me("windowsizeHEIGHT"),String)
+                Return CType(Me("windowsizeHeight"),Integer)
             End Get
             Set
-                Me("windowsizeHEIGHT") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property windowsizeWIDTH() As String
-            Get
-                Return CType(Me("windowsizeWIDTH"),String)
-            End Get
-            Set
-                Me("windowsizeWIDTH") = value
+                Me("windowsizeHeight") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property opacity() As Integer
+        Public Property windowsizeWidth() As Integer
             Get
-                Return CType(Me("opacity"),Integer)
+                Return CType(Me("windowsizeWidth"),Integer)
             End Get
             Set
-                Me("opacity") = value
+                Me("windowsizeWidth") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property zoom() As Integer
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property windowsizeButton() As String
             Get
-                Return CType(Me("zoom"),Integer)
+                Return CType(Me("windowsizeButton"),String)
             End Get
             Set
-                Me("zoom") = value
+                Me("windowsizeButton") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property opacitySetting() As Decimal
+            Get
+                Return CType(Me("opacitySetting"),Decimal)
+            End Get
+            Set
+                Me("opacitySetting") = value
             End Set
         End Property
     End Class
