@@ -1,0 +1,858 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Form1
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Me.StartBtn = New System.Windows.Forms.Button()
+        Me.Panel = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.SSChk = New System.Windows.Forms.Timer(Me.components)
+        Me.RedLbl = New System.Windows.Forms.Label()
+        Me.GreenLbl = New System.Windows.Forms.Label()
+        Me.BlueLbl = New System.Windows.Forms.Label()
+        Me.RedCopy = New System.Windows.Forms.Button()
+        Me.GreenCopy = New System.Windows.Forms.Button()
+        Me.BlueCopy = New System.Windows.Forms.Button()
+        Me.HexCopy = New System.Windows.Forms.Button()
+        Me.AddHex = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyHexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyRedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyGreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyBlueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteRowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Row1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Row2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Row3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Row4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Row5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AllRowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeColoursToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BlueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GreyWhiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GreyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Hashtag = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Del1 = New System.Windows.Forms.Button()
+        Me.Del2 = New System.Windows.Forms.Button()
+        Me.Del3 = New System.Windows.Forms.Button()
+        Me.Del4 = New System.Windows.Forms.Button()
+        Me.Del5 = New System.Windows.Forms.Button()
+        Me.XYmouse = New System.Windows.Forms.Label()
+        Me.Hex1 = New System.Windows.Forms.TextBox()
+        Me.Hex2 = New System.Windows.Forms.TextBox()
+        Me.Hex3 = New System.Windows.Forms.TextBox()
+        Me.Hex4 = New System.Windows.Forms.TextBox()
+        Me.Hex5 = New System.Windows.Forms.TextBox()
+        Me.Red1 = New System.Windows.Forms.TextBox()
+        Me.Red2 = New System.Windows.Forms.TextBox()
+        Me.Red3 = New System.Windows.Forms.TextBox()
+        Me.Red4 = New System.Windows.Forms.TextBox()
+        Me.Red5 = New System.Windows.Forms.TextBox()
+        Me.Green1 = New System.Windows.Forms.TextBox()
+        Me.Green2 = New System.Windows.Forms.TextBox()
+        Me.Green3 = New System.Windows.Forms.TextBox()
+        Me.Green4 = New System.Windows.Forms.TextBox()
+        Me.Green5 = New System.Windows.Forms.TextBox()
+        Me.Blue1 = New System.Windows.Forms.TextBox()
+        Me.Blue2 = New System.Windows.Forms.TextBox()
+        Me.Blue3 = New System.Windows.Forms.TextBox()
+        Me.Blue4 = New System.Windows.Forms.TextBox()
+        Me.Blue5 = New System.Windows.Forms.TextBox()
+        Me.PixelSlider = New System.Windows.Forms.TrackBar()
+        Me.Zoom = New System.Windows.Forms.Label()
+        Me.Slot1 = New System.Windows.Forms.PictureBox()
+        Me.Slot2 = New System.Windows.Forms.PictureBox()
+        Me.Slot3 = New System.Windows.Forms.PictureBox()
+        Me.Slot4 = New System.Windows.Forms.PictureBox()
+        Me.Slot5 = New System.Windows.Forms.PictureBox()
+        Me.ColourCode = New System.Windows.Forms.TextBox()
+        Me.RedTxt = New System.Windows.Forms.TextBox()
+        Me.GreenTxt = New System.Windows.Forms.TextBox()
+        Me.BlueTxt = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PixelSlider, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Slot1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Slot2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Slot3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Slot4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Slot5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'StartBtn
+        '
+        Me.StartBtn.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartBtn.Location = New System.Drawing.Point(12, 27)
+        Me.StartBtn.Name = "StartBtn"
+        Me.StartBtn.Size = New System.Drawing.Size(172, 129)
+        Me.StartBtn.TabIndex = 0
+        Me.StartBtn.Text = "Drag to pick colour"
+        Me.StartBtn.UseVisualStyleBackColor = True
+        '
+        'Panel
+        '
+        Me.Panel.BackColor = System.Drawing.Color.Black
+        Me.Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel.Location = New System.Drawing.Point(193, 27)
+        Me.Panel.Name = "Panel"
+        Me.Panel.Size = New System.Drawing.Size(100, 100)
+        Me.Panel.TabIndex = 2
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 50
+        '
+        'SSChk
+        '
+        Me.SSChk.Interval = 50
+        '
+        'RedLbl
+        '
+        Me.RedLbl.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RedLbl.Location = New System.Drawing.Point(13, 160)
+        Me.RedLbl.Name = "RedLbl"
+        Me.RedLbl.Size = New System.Drawing.Size(65, 29)
+        Me.RedLbl.TabIndex = 3
+        Me.RedLbl.Text = "RED:"
+        Me.RedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'GreenLbl
+        '
+        Me.GreenLbl.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GreenLbl.Location = New System.Drawing.Point(8, 197)
+        Me.GreenLbl.Name = "GreenLbl"
+        Me.GreenLbl.Size = New System.Drawing.Size(65, 29)
+        Me.GreenLbl.TabIndex = 4
+        Me.GreenLbl.Text = "GREEN:"
+        Me.GreenLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'BlueLbl
+        '
+        Me.BlueLbl.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BlueLbl.Location = New System.Drawing.Point(13, 235)
+        Me.BlueLbl.Name = "BlueLbl"
+        Me.BlueLbl.Size = New System.Drawing.Size(65, 29)
+        Me.BlueLbl.TabIndex = 5
+        Me.BlueLbl.Text = "BLUE:"
+        Me.BlueLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'RedCopy
+        '
+        Me.RedCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RedCopy.Location = New System.Drawing.Point(190, 159)
+        Me.RedCopy.Name = "RedCopy"
+        Me.RedCopy.Size = New System.Drawing.Size(47, 32)
+        Me.RedCopy.TabIndex = 13
+        Me.RedCopy.Text = "COPY"
+        Me.RedCopy.UseVisualStyleBackColor = True
+        '
+        'GreenCopy
+        '
+        Me.GreenCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GreenCopy.Location = New System.Drawing.Point(190, 196)
+        Me.GreenCopy.Name = "GreenCopy"
+        Me.GreenCopy.Size = New System.Drawing.Size(47, 31)
+        Me.GreenCopy.TabIndex = 14
+        Me.GreenCopy.Text = "COPY"
+        Me.GreenCopy.UseVisualStyleBackColor = True
+        '
+        'BlueCopy
+        '
+        Me.BlueCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BlueCopy.Location = New System.Drawing.Point(190, 233)
+        Me.BlueCopy.Name = "BlueCopy"
+        Me.BlueCopy.Size = New System.Drawing.Size(47, 32)
+        Me.BlueCopy.TabIndex = 15
+        Me.BlueCopy.Text = "COPY"
+        Me.BlueCopy.UseVisualStyleBackColor = True
+        '
+        'HexCopy
+        '
+        Me.HexCopy.Location = New System.Drawing.Point(245, 159)
+        Me.HexCopy.Name = "HexCopy"
+        Me.HexCopy.Size = New System.Drawing.Size(48, 106)
+        Me.HexCopy.TabIndex = 16
+        Me.HexCopy.Text = "COPY HEX"
+        Me.HexCopy.UseVisualStyleBackColor = True
+        '
+        'AddHex
+        '
+        Me.AddHex.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddHex.Location = New System.Drawing.Point(423, 150)
+        Me.AddHex.Name = "AddHex"
+        Me.AddHex.Size = New System.Drawing.Size(149, 32)
+        Me.AddHex.TabIndex = 19
+        Me.AddHex.Text = "ADD HEX, R, G AND B"
+        Me.AddHex.UseVisualStyleBackColor = True
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.OptionsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.MenuStrip1.Size = New System.Drawing.Size(579, 24)
+        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyHexToolStripMenuItem, Me.CopyRedToolStripMenuItem, Me.CopyGreenToolStripMenuItem, Me.CopyBlueToolStripMenuItem, Me.DeleteRowsToolStripMenuItem})
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'CopyHexToolStripMenuItem
+        '
+        Me.CopyHexToolStripMenuItem.Name = "CopyHexToolStripMenuItem"
+        Me.CopyHexToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyHexToolStripMenuItem.Text = "Copy Hex"
+        '
+        'CopyRedToolStripMenuItem
+        '
+        Me.CopyRedToolStripMenuItem.Name = "CopyRedToolStripMenuItem"
+        Me.CopyRedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyRedToolStripMenuItem.Text = "Copy Red"
+        '
+        'CopyGreenToolStripMenuItem
+        '
+        Me.CopyGreenToolStripMenuItem.Name = "CopyGreenToolStripMenuItem"
+        Me.CopyGreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyGreenToolStripMenuItem.Text = "Copy Green"
+        '
+        'CopyBlueToolStripMenuItem
+        '
+        Me.CopyBlueToolStripMenuItem.Name = "CopyBlueToolStripMenuItem"
+        Me.CopyBlueToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyBlueToolStripMenuItem.Text = "Copy Blue"
+        '
+        'DeleteRowsToolStripMenuItem
+        '
+        Me.DeleteRowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Row1ToolStripMenuItem, Me.Row2ToolStripMenuItem, Me.Row3ToolStripMenuItem, Me.Row4ToolStripMenuItem, Me.Row5ToolStripMenuItem, Me.AllRowsToolStripMenuItem})
+        Me.DeleteRowsToolStripMenuItem.Name = "DeleteRowsToolStripMenuItem"
+        Me.DeleteRowsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteRowsToolStripMenuItem.Text = "Delete Rows"
+        '
+        'Row1ToolStripMenuItem
+        '
+        Me.Row1ToolStripMenuItem.Name = "Row1ToolStripMenuItem"
+        Me.Row1ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.Row1ToolStripMenuItem.Text = "Row 1"
+        '
+        'Row2ToolStripMenuItem
+        '
+        Me.Row2ToolStripMenuItem.Name = "Row2ToolStripMenuItem"
+        Me.Row2ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.Row2ToolStripMenuItem.Text = "Row 2"
+        '
+        'Row3ToolStripMenuItem
+        '
+        Me.Row3ToolStripMenuItem.Name = "Row3ToolStripMenuItem"
+        Me.Row3ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.Row3ToolStripMenuItem.Text = "Row 3"
+        '
+        'Row4ToolStripMenuItem
+        '
+        Me.Row4ToolStripMenuItem.Name = "Row4ToolStripMenuItem"
+        Me.Row4ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.Row4ToolStripMenuItem.Text = "Row 4"
+        '
+        'Row5ToolStripMenuItem
+        '
+        Me.Row5ToolStripMenuItem.Name = "Row5ToolStripMenuItem"
+        Me.Row5ToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.Row5ToolStripMenuItem.Text = "Row 5"
+        '
+        'AllRowsToolStripMenuItem
+        '
+        Me.AllRowsToolStripMenuItem.Name = "AllRowsToolStripMenuItem"
+        Me.AllRowsToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.AllRowsToolStripMenuItem.Text = "All Rows"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeColoursToolStripMenuItem})
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.OptionsToolStripMenuItem.Text = "Options"
+        '
+        'ChangeColoursToolStripMenuItem
+        '
+        Me.ChangeColoursToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RedToolStripMenuItem, Me.GreenToolStripMenuItem, Me.BlueToolStripMenuItem, Me.GreyWhiteToolStripMenuItem, Me.GreyToolStripMenuItem})
+        Me.ChangeColoursToolStripMenuItem.Name = "ChangeColoursToolStripMenuItem"
+        Me.ChangeColoursToolStripMenuItem.Size = New System.Drawing.Size(221, 22)
+        Me.ChangeColoursToolStripMenuItem.Text = "Change Background Colour"
+        '
+        'RedToolStripMenuItem
+        '
+        Me.RedToolStripMenuItem.Name = "RedToolStripMenuItem"
+        Me.RedToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.RedToolStripMenuItem.Text = "Red"
+        '
+        'GreenToolStripMenuItem
+        '
+        Me.GreenToolStripMenuItem.Name = "GreenToolStripMenuItem"
+        Me.GreenToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.GreenToolStripMenuItem.Text = "Green"
+        '
+        'BlueToolStripMenuItem
+        '
+        Me.BlueToolStripMenuItem.Name = "BlueToolStripMenuItem"
+        Me.BlueToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.BlueToolStripMenuItem.Text = "Blue"
+        '
+        'GreyWhiteToolStripMenuItem
+        '
+        Me.GreyWhiteToolStripMenuItem.Name = "GreyWhiteToolStripMenuItem"
+        Me.GreyWhiteToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.GreyWhiteToolStripMenuItem.Text = "Grey-White"
+        '
+        'GreyToolStripMenuItem
+        '
+        Me.GreyToolStripMenuItem.Name = "GreyToolStripMenuItem"
+        Me.GreyToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.GreyToolStripMenuItem.Text = "Grey (Default)"
+        '
+        'Hashtag
+        '
+        Me.Hashtag.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Hashtag.Location = New System.Drawing.Point(193, 128)
+        Me.Hashtag.Name = "Hashtag"
+        Me.Hashtag.Size = New System.Drawing.Size(17, 22)
+        Me.Hashtag.TabIndex = 22
+        Me.Hashtag.Text = "#"
+        Me.Hashtag.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Black
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.PictureBox1.Location = New System.Drawing.Point(300, 150)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(115, 115)
+        Me.PictureBox1.TabIndex = 50
+        Me.PictureBox1.TabStop = False
+        '
+        'Del1
+        '
+        Me.Del1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del1.Location = New System.Drawing.Point(543, 27)
+        Me.Del1.Name = "Del1"
+        Me.Del1.Size = New System.Drawing.Size(29, 22)
+        Me.Del1.TabIndex = 51
+        Me.Del1.Text = "X"
+        Me.Del1.UseVisualStyleBackColor = True
+        '
+        'Del2
+        '
+        Me.Del2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del2.Location = New System.Drawing.Point(543, 50)
+        Me.Del2.Name = "Del2"
+        Me.Del2.Size = New System.Drawing.Size(29, 22)
+        Me.Del2.TabIndex = 52
+        Me.Del2.Text = "X"
+        Me.Del2.UseVisualStyleBackColor = True
+        '
+        'Del3
+        '
+        Me.Del3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del3.Location = New System.Drawing.Point(543, 73)
+        Me.Del3.Name = "Del3"
+        Me.Del3.Size = New System.Drawing.Size(29, 22)
+        Me.Del3.TabIndex = 53
+        Me.Del3.Text = "X"
+        Me.Del3.UseVisualStyleBackColor = True
+        '
+        'Del4
+        '
+        Me.Del4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del4.Location = New System.Drawing.Point(543, 96)
+        Me.Del4.Name = "Del4"
+        Me.Del4.Size = New System.Drawing.Size(29, 22)
+        Me.Del4.TabIndex = 54
+        Me.Del4.Text = "X"
+        Me.Del4.UseVisualStyleBackColor = True
+        '
+        'Del5
+        '
+        Me.Del5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del5.Location = New System.Drawing.Point(543, 119)
+        Me.Del5.Name = "Del5"
+        Me.Del5.Size = New System.Drawing.Size(29, 22)
+        Me.Del5.TabIndex = 55
+        Me.Del5.Text = "X"
+        Me.Del5.UseVisualStyleBackColor = True
+        '
+        'XYmouse
+        '
+        Me.XYmouse.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XYmouse.Location = New System.Drawing.Point(423, 244)
+        Me.XYmouse.Name = "XYmouse"
+        Me.XYmouse.Size = New System.Drawing.Size(149, 21)
+        Me.XYmouse.TabIndex = 62
+        Me.XYmouse.Text = "X: Y:"
+        Me.XYmouse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Hex1
+        '
+        Me.Hex1.Location = New System.Drawing.Point(300, 27)
+        Me.Hex1.Name = "Hex1"
+        Me.Hex1.ReadOnly = True
+        Me.Hex1.Size = New System.Drawing.Size(73, 22)
+        Me.Hex1.TabIndex = 63
+        '
+        'Hex2
+        '
+        Me.Hex2.Location = New System.Drawing.Point(300, 50)
+        Me.Hex2.Name = "Hex2"
+        Me.Hex2.ReadOnly = True
+        Me.Hex2.Size = New System.Drawing.Size(73, 22)
+        Me.Hex2.TabIndex = 64
+        '
+        'Hex3
+        '
+        Me.Hex3.Location = New System.Drawing.Point(300, 73)
+        Me.Hex3.Name = "Hex3"
+        Me.Hex3.ReadOnly = True
+        Me.Hex3.Size = New System.Drawing.Size(73, 22)
+        Me.Hex3.TabIndex = 65
+        '
+        'Hex4
+        '
+        Me.Hex4.Location = New System.Drawing.Point(300, 96)
+        Me.Hex4.Name = "Hex4"
+        Me.Hex4.ReadOnly = True
+        Me.Hex4.Size = New System.Drawing.Size(73, 22)
+        Me.Hex4.TabIndex = 66
+        '
+        'Hex5
+        '
+        Me.Hex5.Location = New System.Drawing.Point(300, 119)
+        Me.Hex5.Name = "Hex5"
+        Me.Hex5.ReadOnly = True
+        Me.Hex5.Size = New System.Drawing.Size(73, 22)
+        Me.Hex5.TabIndex = 67
+        '
+        'Red1
+        '
+        Me.Red1.Location = New System.Drawing.Point(379, 27)
+        Me.Red1.Name = "Red1"
+        Me.Red1.ReadOnly = True
+        Me.Red1.Size = New System.Drawing.Size(42, 22)
+        Me.Red1.TabIndex = 68
+        '
+        'Red2
+        '
+        Me.Red2.Location = New System.Drawing.Point(379, 50)
+        Me.Red2.Name = "Red2"
+        Me.Red2.ReadOnly = True
+        Me.Red2.Size = New System.Drawing.Size(42, 22)
+        Me.Red2.TabIndex = 69
+        '
+        'Red3
+        '
+        Me.Red3.Location = New System.Drawing.Point(379, 73)
+        Me.Red3.Name = "Red3"
+        Me.Red3.ReadOnly = True
+        Me.Red3.Size = New System.Drawing.Size(42, 22)
+        Me.Red3.TabIndex = 70
+        '
+        'Red4
+        '
+        Me.Red4.Location = New System.Drawing.Point(379, 96)
+        Me.Red4.Name = "Red4"
+        Me.Red4.ReadOnly = True
+        Me.Red4.Size = New System.Drawing.Size(42, 22)
+        Me.Red4.TabIndex = 71
+        '
+        'Red5
+        '
+        Me.Red5.Location = New System.Drawing.Point(379, 119)
+        Me.Red5.Name = "Red5"
+        Me.Red5.ReadOnly = True
+        Me.Red5.Size = New System.Drawing.Size(42, 22)
+        Me.Red5.TabIndex = 72
+        '
+        'Green1
+        '
+        Me.Green1.Location = New System.Drawing.Point(423, 27)
+        Me.Green1.Name = "Green1"
+        Me.Green1.ReadOnly = True
+        Me.Green1.Size = New System.Drawing.Size(42, 22)
+        Me.Green1.TabIndex = 73
+        '
+        'Green2
+        '
+        Me.Green2.Location = New System.Drawing.Point(423, 50)
+        Me.Green2.Name = "Green2"
+        Me.Green2.ReadOnly = True
+        Me.Green2.Size = New System.Drawing.Size(42, 22)
+        Me.Green2.TabIndex = 74
+        '
+        'Green3
+        '
+        Me.Green3.Location = New System.Drawing.Point(423, 73)
+        Me.Green3.Name = "Green3"
+        Me.Green3.ReadOnly = True
+        Me.Green3.Size = New System.Drawing.Size(42, 22)
+        Me.Green3.TabIndex = 75
+        '
+        'Green4
+        '
+        Me.Green4.Location = New System.Drawing.Point(423, 96)
+        Me.Green4.Name = "Green4"
+        Me.Green4.ReadOnly = True
+        Me.Green4.Size = New System.Drawing.Size(42, 22)
+        Me.Green4.TabIndex = 76
+        '
+        'Green5
+        '
+        Me.Green5.Location = New System.Drawing.Point(423, 119)
+        Me.Green5.Name = "Green5"
+        Me.Green5.ReadOnly = True
+        Me.Green5.Size = New System.Drawing.Size(42, 22)
+        Me.Green5.TabIndex = 77
+        '
+        'Blue1
+        '
+        Me.Blue1.Location = New System.Drawing.Point(467, 27)
+        Me.Blue1.Name = "Blue1"
+        Me.Blue1.ReadOnly = True
+        Me.Blue1.Size = New System.Drawing.Size(42, 22)
+        Me.Blue1.TabIndex = 78
+        '
+        'Blue2
+        '
+        Me.Blue2.Location = New System.Drawing.Point(467, 50)
+        Me.Blue2.Name = "Blue2"
+        Me.Blue2.ReadOnly = True
+        Me.Blue2.Size = New System.Drawing.Size(42, 22)
+        Me.Blue2.TabIndex = 79
+        '
+        'Blue3
+        '
+        Me.Blue3.Location = New System.Drawing.Point(467, 73)
+        Me.Blue3.Name = "Blue3"
+        Me.Blue3.ReadOnly = True
+        Me.Blue3.Size = New System.Drawing.Size(42, 22)
+        Me.Blue3.TabIndex = 80
+        '
+        'Blue4
+        '
+        Me.Blue4.Location = New System.Drawing.Point(467, 96)
+        Me.Blue4.Name = "Blue4"
+        Me.Blue4.ReadOnly = True
+        Me.Blue4.Size = New System.Drawing.Size(42, 22)
+        Me.Blue4.TabIndex = 81
+        '
+        'Blue5
+        '
+        Me.Blue5.Location = New System.Drawing.Point(467, 119)
+        Me.Blue5.Name = "Blue5"
+        Me.Blue5.ReadOnly = True
+        Me.Blue5.Size = New System.Drawing.Size(42, 22)
+        Me.Blue5.TabIndex = 82
+        '
+        'PixelSlider
+        '
+        Me.PixelSlider.Location = New System.Drawing.Point(423, 182)
+        Me.PixelSlider.Maximum = 19
+        Me.PixelSlider.Minimum = 1
+        Me.PixelSlider.Name = "PixelSlider"
+        Me.PixelSlider.Size = New System.Drawing.Size(149, 45)
+        Me.PixelSlider.TabIndex = 83
+        Me.PixelSlider.Value = 5
+        '
+        'Zoom
+        '
+        Me.Zoom.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zoom.Location = New System.Drawing.Point(421, 215)
+        Me.Zoom.Name = "Zoom"
+        Me.Zoom.Size = New System.Drawing.Size(151, 21)
+        Me.Zoom.TabIndex = 85
+        Me.Zoom.Text = "Zoom"
+        Me.Zoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Slot1
+        '
+        Me.Slot1.BackColor = System.Drawing.Color.Transparent
+        Me.Slot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Slot1.Location = New System.Drawing.Point(515, 27)
+        Me.Slot1.Name = "Slot1"
+        Me.Slot1.Size = New System.Drawing.Size(22, 22)
+        Me.Slot1.TabIndex = 86
+        Me.Slot1.TabStop = False
+        '
+        'Slot2
+        '
+        Me.Slot2.BackColor = System.Drawing.Color.Transparent
+        Me.Slot2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Slot2.Location = New System.Drawing.Point(515, 50)
+        Me.Slot2.Name = "Slot2"
+        Me.Slot2.Size = New System.Drawing.Size(22, 22)
+        Me.Slot2.TabIndex = 87
+        Me.Slot2.TabStop = False
+        '
+        'Slot3
+        '
+        Me.Slot3.BackColor = System.Drawing.Color.Transparent
+        Me.Slot3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Slot3.Location = New System.Drawing.Point(515, 73)
+        Me.Slot3.Name = "Slot3"
+        Me.Slot3.Size = New System.Drawing.Size(22, 22)
+        Me.Slot3.TabIndex = 88
+        Me.Slot3.TabStop = False
+        '
+        'Slot4
+        '
+        Me.Slot4.BackColor = System.Drawing.Color.Transparent
+        Me.Slot4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Slot4.Location = New System.Drawing.Point(515, 96)
+        Me.Slot4.Name = "Slot4"
+        Me.Slot4.Size = New System.Drawing.Size(22, 22)
+        Me.Slot4.TabIndex = 89
+        Me.Slot4.TabStop = False
+        '
+        'Slot5
+        '
+        Me.Slot5.BackColor = System.Drawing.Color.Transparent
+        Me.Slot5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Slot5.Location = New System.Drawing.Point(515, 119)
+        Me.Slot5.Name = "Slot5"
+        Me.Slot5.Size = New System.Drawing.Size(22, 22)
+        Me.Slot5.TabIndex = 90
+        Me.Slot5.TabStop = False
+        '
+        'ColourCode
+        '
+        Me.ColourCode.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ColourCode.Location = New System.Drawing.Point(215, 129)
+        Me.ColourCode.Name = "ColourCode"
+        Me.ColourCode.Size = New System.Drawing.Size(78, 27)
+        Me.ColourCode.TabIndex = 91
+        Me.ColourCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'RedTxt
+        '
+        Me.RedTxt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RedTxt.Location = New System.Drawing.Point(84, 160)
+        Me.RedTxt.Name = "RedTxt"
+        Me.RedTxt.ReadOnly = True
+        Me.RedTxt.Size = New System.Drawing.Size(100, 29)
+        Me.RedTxt.TabIndex = 92
+        Me.RedTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'GreenTxt
+        '
+        Me.GreenTxt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GreenTxt.Location = New System.Drawing.Point(84, 197)
+        Me.GreenTxt.Name = "GreenTxt"
+        Me.GreenTxt.ReadOnly = True
+        Me.GreenTxt.Size = New System.Drawing.Size(100, 29)
+        Me.GreenTxt.TabIndex = 93
+        Me.GreenTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'BlueTxt
+        '
+        Me.BlueTxt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BlueTxt.Location = New System.Drawing.Point(84, 235)
+        Me.BlueTxt.Name = "BlueTxt"
+        Me.BlueTxt.ReadOnly = True
+        Me.BlueTxt.Size = New System.Drawing.Size(100, 29)
+        Me.BlueTxt.TabIndex = 94
+        Me.BlueTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.ClientSize = New System.Drawing.Size(579, 279)
+        Me.Controls.Add(Me.BlueTxt)
+        Me.Controls.Add(Me.GreenTxt)
+        Me.Controls.Add(Me.RedTxt)
+        Me.Controls.Add(Me.ColourCode)
+        Me.Controls.Add(Me.Slot5)
+        Me.Controls.Add(Me.Slot4)
+        Me.Controls.Add(Me.Slot3)
+        Me.Controls.Add(Me.Slot2)
+        Me.Controls.Add(Me.Slot1)
+        Me.Controls.Add(Me.Zoom)
+        Me.Controls.Add(Me.PixelSlider)
+        Me.Controls.Add(Me.Blue5)
+        Me.Controls.Add(Me.Blue4)
+        Me.Controls.Add(Me.Blue3)
+        Me.Controls.Add(Me.Blue2)
+        Me.Controls.Add(Me.Blue1)
+        Me.Controls.Add(Me.Green5)
+        Me.Controls.Add(Me.Green4)
+        Me.Controls.Add(Me.Green3)
+        Me.Controls.Add(Me.Green2)
+        Me.Controls.Add(Me.Green1)
+        Me.Controls.Add(Me.Red5)
+        Me.Controls.Add(Me.Red4)
+        Me.Controls.Add(Me.Red3)
+        Me.Controls.Add(Me.Red2)
+        Me.Controls.Add(Me.Red1)
+        Me.Controls.Add(Me.Hex5)
+        Me.Controls.Add(Me.Hex4)
+        Me.Controls.Add(Me.Hex3)
+        Me.Controls.Add(Me.Hex2)
+        Me.Controls.Add(Me.Hex1)
+        Me.Controls.Add(Me.XYmouse)
+        Me.Controls.Add(Me.AddHex)
+        Me.Controls.Add(Me.Del5)
+        Me.Controls.Add(Me.Del4)
+        Me.Controls.Add(Me.Del3)
+        Me.Controls.Add(Me.Del2)
+        Me.Controls.Add(Me.Del1)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Hashtag)
+        Me.Controls.Add(Me.HexCopy)
+        Me.Controls.Add(Me.BlueCopy)
+        Me.Controls.Add(Me.GreenCopy)
+        Me.Controls.Add(Me.RedCopy)
+        Me.Controls.Add(Me.BlueLbl)
+        Me.Controls.Add(Me.GreenLbl)
+        Me.Controls.Add(Me.RedLbl)
+        Me.Controls.Add(Me.Panel)
+        Me.Controls.Add(Me.StartBtn)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Colour Picker v1.3.2"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PixelSlider, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Slot1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Slot2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Slot3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Slot4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Slot5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents StartBtn As Button
+    Friend WithEvents Panel As Panel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents SSChk As Timer
+    Friend WithEvents RedLbl As Label
+    Friend WithEvents GreenLbl As Label
+    Friend WithEvents BlueLbl As Label
+    Friend WithEvents RedCopy As Button
+    Friend WithEvents GreenCopy As Button
+    Friend WithEvents BlueCopy As Button
+    Friend WithEvents HexCopy As Button
+    Friend WithEvents AddHex As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyRedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyGreenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyBlueToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CopyHexToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChangeColoursToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BlueToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GreyWhiteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GreyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GreenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Hashtag As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Del1 As Button
+    Friend WithEvents Del2 As Button
+    Friend WithEvents Del3 As Button
+    Friend WithEvents Del4 As Button
+    Friend WithEvents Del5 As Button
+    Friend WithEvents XYmouse As Label
+    Friend WithEvents Hex1 As TextBox
+    Friend WithEvents Hex2 As TextBox
+    Friend WithEvents Hex3 As TextBox
+    Friend WithEvents Hex4 As TextBox
+    Friend WithEvents Hex5 As TextBox
+    Friend WithEvents Red1 As TextBox
+    Friend WithEvents Red2 As TextBox
+    Friend WithEvents Red3 As TextBox
+    Friend WithEvents Red4 As TextBox
+    Friend WithEvents Red5 As TextBox
+    Friend WithEvents Green1 As TextBox
+    Friend WithEvents Green2 As TextBox
+    Friend WithEvents Green3 As TextBox
+    Friend WithEvents Green4 As TextBox
+    Friend WithEvents Green5 As TextBox
+    Friend WithEvents Blue1 As TextBox
+    Friend WithEvents Blue2 As TextBox
+    Friend WithEvents Blue3 As TextBox
+    Friend WithEvents Blue4 As TextBox
+    Friend WithEvents Blue5 As TextBox
+    Friend WithEvents PixelSlider As TrackBar
+    Friend WithEvents Zoom As Label
+    Friend WithEvents Slot1 As PictureBox
+    Friend WithEvents Slot2 As PictureBox
+    Friend WithEvents Slot3 As PictureBox
+    Friend WithEvents Slot4 As PictureBox
+    Friend WithEvents Slot5 As PictureBox
+    Friend WithEvents ColourCode As TextBox
+    Friend WithEvents RedTxt As TextBox
+    Friend WithEvents GreenTxt As TextBox
+    Friend WithEvents BlueTxt As TextBox
+    Friend WithEvents DeleteRowsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Row1ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Row2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Row3ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Row4ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Row5ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AllRowsToolStripMenuItem As ToolStripMenuItem
+End Class
