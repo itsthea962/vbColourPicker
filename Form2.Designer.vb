@@ -32,8 +32,10 @@ Partial Class Form2
         Me.RadioButtonNormal = New System.Windows.Forms.RadioButton()
         Me.RadioButtonSmaller = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.opacityText = New System.Windows.Forms.TextBox()
-        Me.opacitySet = New System.Windows.Forms.Button()
+        Me.sizeWindow = New System.Windows.Forms.Timer(Me.components)
+        Me.opacitySilderTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.opacitySlider = New System.Windows.Forms.TrackBar()
+        CType(Me.opacitySlider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -107,37 +109,40 @@ Partial Class Form2
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(10, 120)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(124, 25)
+        Me.Label3.Size = New System.Drawing.Size(57, 25)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Opacity:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'opacityText
+        'sizeWindow
         '
-        Me.opacityText.AcceptsReturn = True
-        Me.opacityText.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.opacityText.Location = New System.Drawing.Point(140, 120)
-        Me.opacityText.Name = "opacityText"
-        Me.opacityText.Size = New System.Drawing.Size(75, 25)
-        Me.opacityText.TabIndex = 7
+        Me.sizeWindow.Enabled = True
+        Me.sizeWindow.Interval = 1
         '
-        'opacitySet
+        'opacitySilderTimer
         '
-        Me.opacitySet.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.opacitySet.Location = New System.Drawing.Point(222, 120)
-        Me.opacitySet.Name = "opacitySet"
-        Me.opacitySet.Size = New System.Drawing.Size(41, 25)
-        Me.opacitySet.TabIndex = 8
-        Me.opacitySet.Text = "%"
-        Me.opacitySet.UseVisualStyleBackColor = True
+        Me.opacitySilderTimer.Enabled = True
+        Me.opacitySilderTimer.Interval = 1
+        '
+        'opacitySlider
+        '
+        Me.opacitySlider.AutoSize = False
+        Me.opacitySlider.LargeChange = 1
+        Me.opacitySlider.Location = New System.Drawing.Point(73, 120)
+        Me.opacitySlider.Maximum = 100
+        Me.opacitySlider.Minimum = 50
+        Me.opacitySlider.Name = "opacitySlider"
+        Me.opacitySlider.Size = New System.Drawing.Size(190, 45)
+        Me.opacitySlider.TabIndex = 10
+        Me.opacitySlider.Value = 50
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(282, 410)
-        Me.Controls.Add(Me.opacitySet)
-        Me.Controls.Add(Me.opacityText)
+        Me.Controls.Add(Me.opacitySlider)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.RadioButtonSmaller)
         Me.Controls.Add(Me.RadioButtonNormal)
@@ -146,13 +151,13 @@ Partial Class Form2
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form2"
         Me.Text = "Options"
         Me.TopMost = True
+        CType(Me.opacitySlider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -164,6 +169,7 @@ Partial Class Form2
     Friend WithEvents RadioButtonNormal As RadioButton
     Friend WithEvents RadioButtonSmaller As RadioButton
     Friend WithEvents Label3 As Label
-    Friend WithEvents opacityText As TextBox
-    Friend WithEvents opacitySet As Button
+    Friend WithEvents sizeWindow As Timer
+    Friend WithEvents opacitySilderTimer As Timer
+    Friend WithEvents opacitySlider As TrackBar
 End Class

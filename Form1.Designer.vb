@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.StartBtn = New System.Windows.Forms.Button()
         Me.Panel = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SSChk = New System.Windows.Forms.Timer(Me.components)
@@ -52,6 +51,9 @@ Partial Class Form1
         Me.Row5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AllRowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpWithColourPickerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Hashtag = New System.Windows.Forms.Label()
         Me.Del1 = New System.Windows.Forms.Button()
         Me.Del2 = New System.Windows.Forms.Button()
@@ -85,13 +87,15 @@ Partial Class Form1
         Me.RedTxt = New System.Windows.Forms.TextBox()
         Me.GreenTxt = New System.Windows.Forms.TextBox()
         Me.BlueTxt = New System.Windows.Forms.TextBox()
+        Me.backgroundColourSetting = New System.Windows.Forms.Timer(Me.components)
+        Me.startTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.StartBtn = New System.Windows.Forms.Button()
         Me.Slot5 = New System.Windows.Forms.PictureBox()
         Me.Slot4 = New System.Windows.Forms.PictureBox()
         Me.Slot3 = New System.Windows.Forms.PictureBox()
         Me.Slot2 = New System.Windows.Forms.PictureBox()
         Me.Slot1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.backgroundColourSetting = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PixelSlider, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Slot5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,21 +106,11 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'StartBtn
-        '
-        Me.StartBtn.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StartBtn.Location = New System.Drawing.Point(12, 27)
-        Me.StartBtn.Name = "StartBtn"
-        Me.StartBtn.Size = New System.Drawing.Size(172, 129)
-        Me.StartBtn.TabIndex = 0
-        Me.StartBtn.Text = "Drag to pick colour"
-        Me.StartBtn.UseVisualStyleBackColor = True
-        '
         'Panel
         '
         Me.Panel.BackColor = System.Drawing.Color.Black
         Me.Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel.Location = New System.Drawing.Point(193, 27)
+        Me.Panel.Location = New System.Drawing.Point(193, 36)
         Me.Panel.Name = "Panel"
         Me.Panel.Size = New System.Drawing.Size(100, 100)
         Me.Panel.TabIndex = 2
@@ -132,37 +126,37 @@ Partial Class Form1
         'RedLbl
         '
         Me.RedLbl.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RedLbl.Location = New System.Drawing.Point(13, 160)
+        Me.RedLbl.Location = New System.Drawing.Point(13, 175)
         Me.RedLbl.Name = "RedLbl"
         Me.RedLbl.Size = New System.Drawing.Size(65, 29)
         Me.RedLbl.TabIndex = 3
         Me.RedLbl.Text = "RED:"
-        Me.RedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.RedLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GreenLbl
         '
         Me.GreenLbl.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GreenLbl.Location = New System.Drawing.Point(8, 197)
+        Me.GreenLbl.Location = New System.Drawing.Point(13, 212)
         Me.GreenLbl.Name = "GreenLbl"
         Me.GreenLbl.Size = New System.Drawing.Size(65, 29)
         Me.GreenLbl.TabIndex = 4
         Me.GreenLbl.Text = "GREEN:"
-        Me.GreenLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GreenLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'BlueLbl
         '
         Me.BlueLbl.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BlueLbl.Location = New System.Drawing.Point(13, 235)
+        Me.BlueLbl.Location = New System.Drawing.Point(13, 250)
         Me.BlueLbl.Name = "BlueLbl"
         Me.BlueLbl.Size = New System.Drawing.Size(65, 29)
         Me.BlueLbl.TabIndex = 5
         Me.BlueLbl.Text = "BLUE:"
-        Me.BlueLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BlueLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RedCopy
         '
         Me.RedCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RedCopy.Location = New System.Drawing.Point(190, 159)
+        Me.RedCopy.Location = New System.Drawing.Point(190, 174)
         Me.RedCopy.Name = "RedCopy"
         Me.RedCopy.Size = New System.Drawing.Size(47, 32)
         Me.RedCopy.TabIndex = 13
@@ -172,7 +166,7 @@ Partial Class Form1
         'GreenCopy
         '
         Me.GreenCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GreenCopy.Location = New System.Drawing.Point(190, 196)
+        Me.GreenCopy.Location = New System.Drawing.Point(190, 211)
         Me.GreenCopy.Name = "GreenCopy"
         Me.GreenCopy.Size = New System.Drawing.Size(47, 31)
         Me.GreenCopy.TabIndex = 14
@@ -182,7 +176,7 @@ Partial Class Form1
         'BlueCopy
         '
         Me.BlueCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BlueCopy.Location = New System.Drawing.Point(190, 233)
+        Me.BlueCopy.Location = New System.Drawing.Point(190, 248)
         Me.BlueCopy.Name = "BlueCopy"
         Me.BlueCopy.Size = New System.Drawing.Size(47, 32)
         Me.BlueCopy.TabIndex = 15
@@ -191,7 +185,7 @@ Partial Class Form1
         '
         'HexCopy
         '
-        Me.HexCopy.Location = New System.Drawing.Point(245, 159)
+        Me.HexCopy.Location = New System.Drawing.Point(245, 174)
         Me.HexCopy.Name = "HexCopy"
         Me.HexCopy.Size = New System.Drawing.Size(48, 106)
         Me.HexCopy.TabIndex = 16
@@ -201,7 +195,7 @@ Partial Class Form1
         'AddHex
         '
         Me.AddHex.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddHex.Location = New System.Drawing.Point(423, 150)
+        Me.AddHex.Location = New System.Drawing.Point(431, 165)
         Me.AddHex.Name = "AddHex"
         Me.AddHex.Size = New System.Drawing.Size(149, 32)
         Me.AddHex.TabIndex = 19
@@ -210,11 +204,11 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.OptionsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.MenuStrip1.Size = New System.Drawing.Size(579, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(592, 24)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -228,7 +222,7 @@ Partial Class Form1
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(93, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'EditToolStripMenuItem
@@ -241,32 +235,32 @@ Partial Class Form1
         'CopyHexToolStripMenuItem
         '
         Me.CopyHexToolStripMenuItem.Name = "CopyHexToolStripMenuItem"
-        Me.CopyHexToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyHexToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.CopyHexToolStripMenuItem.Text = "Copy Hex"
         '
         'CopyRedToolStripMenuItem
         '
         Me.CopyRedToolStripMenuItem.Name = "CopyRedToolStripMenuItem"
-        Me.CopyRedToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyRedToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.CopyRedToolStripMenuItem.Text = "Copy Red"
         '
         'CopyGreenToolStripMenuItem
         '
         Me.CopyGreenToolStripMenuItem.Name = "CopyGreenToolStripMenuItem"
-        Me.CopyGreenToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyGreenToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.CopyGreenToolStripMenuItem.Text = "Copy Green"
         '
         'CopyBlueToolStripMenuItem
         '
         Me.CopyBlueToolStripMenuItem.Name = "CopyBlueToolStripMenuItem"
-        Me.CopyBlueToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CopyBlueToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.CopyBlueToolStripMenuItem.Text = "Copy Blue"
         '
         'DeleteRowsToolStripMenuItem
         '
         Me.DeleteRowsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Row1ToolStripMenuItem, Me.Row2ToolStripMenuItem, Me.Row3ToolStripMenuItem, Me.Row4ToolStripMenuItem, Me.Row5ToolStripMenuItem, Me.AllRowsToolStripMenuItem})
         Me.DeleteRowsToolStripMenuItem.Name = "DeleteRowsToolStripMenuItem"
-        Me.DeleteRowsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeleteRowsToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.DeleteRowsToolStripMenuItem.Text = "Delete Rows"
         '
         'Row1ToolStripMenuItem
@@ -311,10 +305,29 @@ Partial Class Form1
         Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.OptionsToolStripMenuItem.Text = "Options"
         '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.HelpWithColourPickerToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.AboutToolStripMenuItem.Text = "About Colour Picker"
+        '
+        'HelpWithColourPickerToolStripMenuItem
+        '
+        Me.HelpWithColourPickerToolStripMenuItem.Name = "HelpWithColourPickerToolStripMenuItem"
+        Me.HelpWithColourPickerToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.HelpWithColourPickerToolStripMenuItem.Text = "Help with Colour Picker"
+        '
         'Hashtag
         '
         Me.Hashtag.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Hashtag.Location = New System.Drawing.Point(193, 128)
+        Me.Hashtag.Location = New System.Drawing.Point(193, 137)
         Me.Hashtag.Name = "Hashtag"
         Me.Hashtag.Size = New System.Drawing.Size(17, 22)
         Me.Hashtag.TabIndex = 22
@@ -323,8 +336,8 @@ Partial Class Form1
         '
         'Del1
         '
-        Me.Del1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Del1.Location = New System.Drawing.Point(543, 27)
+        Me.Del1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del1.Location = New System.Drawing.Point(551, 36)
         Me.Del1.Name = "Del1"
         Me.Del1.Size = New System.Drawing.Size(29, 22)
         Me.Del1.TabIndex = 51
@@ -333,8 +346,8 @@ Partial Class Form1
         '
         'Del2
         '
-        Me.Del2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Del2.Location = New System.Drawing.Point(543, 50)
+        Me.Del2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del2.Location = New System.Drawing.Point(551, 59)
         Me.Del2.Name = "Del2"
         Me.Del2.Size = New System.Drawing.Size(29, 22)
         Me.Del2.TabIndex = 52
@@ -343,8 +356,8 @@ Partial Class Form1
         '
         'Del3
         '
-        Me.Del3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Del3.Location = New System.Drawing.Point(543, 73)
+        Me.Del3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del3.Location = New System.Drawing.Point(551, 82)
         Me.Del3.Name = "Del3"
         Me.Del3.Size = New System.Drawing.Size(29, 22)
         Me.Del3.TabIndex = 53
@@ -353,8 +366,8 @@ Partial Class Form1
         '
         'Del4
         '
-        Me.Del4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Del4.Location = New System.Drawing.Point(543, 96)
+        Me.Del4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del4.Location = New System.Drawing.Point(551, 105)
         Me.Del4.Name = "Del4"
         Me.Del4.Size = New System.Drawing.Size(29, 22)
         Me.Del4.TabIndex = 54
@@ -363,8 +376,8 @@ Partial Class Form1
         '
         'Del5
         '
-        Me.Del5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Del5.Location = New System.Drawing.Point(543, 119)
+        Me.Del5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del5.Location = New System.Drawing.Point(551, 128)
         Me.Del5.Name = "Del5"
         Me.Del5.Size = New System.Drawing.Size(29, 22)
         Me.Del5.TabIndex = 55
@@ -374,7 +387,7 @@ Partial Class Form1
         'XYmouse
         '
         Me.XYmouse.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XYmouse.Location = New System.Drawing.Point(423, 244)
+        Me.XYmouse.Location = New System.Drawing.Point(431, 259)
         Me.XYmouse.Name = "XYmouse"
         Me.XYmouse.Size = New System.Drawing.Size(149, 21)
         Me.XYmouse.TabIndex = 62
@@ -383,182 +396,202 @@ Partial Class Form1
         '
         'Hex1
         '
-        Me.Hex1.Location = New System.Drawing.Point(300, 27)
+        Me.Hex1.Location = New System.Drawing.Point(308, 36)
         Me.Hex1.Name = "Hex1"
         Me.Hex1.ReadOnly = True
         Me.Hex1.Size = New System.Drawing.Size(73, 22)
         Me.Hex1.TabIndex = 63
+        Me.Hex1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Hex2
         '
-        Me.Hex2.Location = New System.Drawing.Point(300, 50)
+        Me.Hex2.Location = New System.Drawing.Point(308, 59)
         Me.Hex2.Name = "Hex2"
         Me.Hex2.ReadOnly = True
         Me.Hex2.Size = New System.Drawing.Size(73, 22)
         Me.Hex2.TabIndex = 64
+        Me.Hex2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Hex3
         '
-        Me.Hex3.Location = New System.Drawing.Point(300, 73)
+        Me.Hex3.Location = New System.Drawing.Point(308, 82)
         Me.Hex3.Name = "Hex3"
         Me.Hex3.ReadOnly = True
         Me.Hex3.Size = New System.Drawing.Size(73, 22)
         Me.Hex3.TabIndex = 65
+        Me.Hex3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Hex4
         '
-        Me.Hex4.Location = New System.Drawing.Point(300, 96)
+        Me.Hex4.Location = New System.Drawing.Point(308, 105)
         Me.Hex4.Name = "Hex4"
         Me.Hex4.ReadOnly = True
         Me.Hex4.Size = New System.Drawing.Size(73, 22)
         Me.Hex4.TabIndex = 66
+        Me.Hex4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Hex5
         '
-        Me.Hex5.Location = New System.Drawing.Point(300, 119)
+        Me.Hex5.Location = New System.Drawing.Point(308, 128)
         Me.Hex5.Name = "Hex5"
         Me.Hex5.ReadOnly = True
         Me.Hex5.Size = New System.Drawing.Size(73, 22)
         Me.Hex5.TabIndex = 67
+        Me.Hex5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Red1
         '
         Me.Red1.BackColor = System.Drawing.Color.Red
-        Me.Red1.Location = New System.Drawing.Point(379, 27)
+        Me.Red1.Location = New System.Drawing.Point(387, 36)
         Me.Red1.Name = "Red1"
         Me.Red1.ReadOnly = True
         Me.Red1.Size = New System.Drawing.Size(42, 22)
         Me.Red1.TabIndex = 68
+        Me.Red1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Red2
         '
         Me.Red2.BackColor = System.Drawing.Color.Red
-        Me.Red2.Location = New System.Drawing.Point(379, 50)
+        Me.Red2.Location = New System.Drawing.Point(387, 59)
         Me.Red2.Name = "Red2"
         Me.Red2.ReadOnly = True
         Me.Red2.Size = New System.Drawing.Size(42, 22)
         Me.Red2.TabIndex = 69
+        Me.Red2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Red3
         '
         Me.Red3.BackColor = System.Drawing.Color.Red
-        Me.Red3.Location = New System.Drawing.Point(379, 73)
+        Me.Red3.Location = New System.Drawing.Point(387, 82)
         Me.Red3.Name = "Red3"
         Me.Red3.ReadOnly = True
         Me.Red3.Size = New System.Drawing.Size(42, 22)
         Me.Red3.TabIndex = 70
+        Me.Red3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Red4
         '
         Me.Red4.BackColor = System.Drawing.Color.Red
-        Me.Red4.Location = New System.Drawing.Point(379, 96)
+        Me.Red4.Location = New System.Drawing.Point(387, 105)
         Me.Red4.Name = "Red4"
         Me.Red4.ReadOnly = True
         Me.Red4.Size = New System.Drawing.Size(42, 22)
         Me.Red4.TabIndex = 71
+        Me.Red4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Red5
         '
         Me.Red5.BackColor = System.Drawing.Color.Red
-        Me.Red5.Location = New System.Drawing.Point(379, 119)
+        Me.Red5.Location = New System.Drawing.Point(387, 128)
         Me.Red5.Name = "Red5"
         Me.Red5.ReadOnly = True
         Me.Red5.Size = New System.Drawing.Size(42, 22)
         Me.Red5.TabIndex = 72
+        Me.Red5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Green1
         '
         Me.Green1.BackColor = System.Drawing.Color.Green
-        Me.Green1.Location = New System.Drawing.Point(423, 27)
+        Me.Green1.Location = New System.Drawing.Point(431, 36)
         Me.Green1.Name = "Green1"
         Me.Green1.ReadOnly = True
         Me.Green1.Size = New System.Drawing.Size(42, 22)
         Me.Green1.TabIndex = 73
+        Me.Green1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Green2
         '
         Me.Green2.BackColor = System.Drawing.Color.Green
-        Me.Green2.Location = New System.Drawing.Point(423, 50)
+        Me.Green2.Location = New System.Drawing.Point(431, 59)
         Me.Green2.Name = "Green2"
         Me.Green2.ReadOnly = True
         Me.Green2.Size = New System.Drawing.Size(42, 22)
         Me.Green2.TabIndex = 74
+        Me.Green2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Green3
         '
         Me.Green3.BackColor = System.Drawing.Color.Green
-        Me.Green3.Location = New System.Drawing.Point(423, 73)
+        Me.Green3.Location = New System.Drawing.Point(431, 82)
         Me.Green3.Name = "Green3"
         Me.Green3.ReadOnly = True
         Me.Green3.Size = New System.Drawing.Size(42, 22)
         Me.Green3.TabIndex = 75
+        Me.Green3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Green4
         '
         Me.Green4.BackColor = System.Drawing.Color.Green
-        Me.Green4.Location = New System.Drawing.Point(423, 96)
+        Me.Green4.Location = New System.Drawing.Point(431, 105)
         Me.Green4.Name = "Green4"
         Me.Green4.ReadOnly = True
         Me.Green4.Size = New System.Drawing.Size(42, 22)
         Me.Green4.TabIndex = 76
+        Me.Green4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Green5
         '
         Me.Green5.BackColor = System.Drawing.Color.Green
-        Me.Green5.Location = New System.Drawing.Point(423, 119)
+        Me.Green5.Location = New System.Drawing.Point(431, 128)
         Me.Green5.Name = "Green5"
         Me.Green5.ReadOnly = True
         Me.Green5.Size = New System.Drawing.Size(42, 22)
         Me.Green5.TabIndex = 77
+        Me.Green5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Blue1
         '
         Me.Blue1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Blue1.Location = New System.Drawing.Point(467, 27)
+        Me.Blue1.Location = New System.Drawing.Point(475, 36)
         Me.Blue1.Name = "Blue1"
         Me.Blue1.ReadOnly = True
         Me.Blue1.Size = New System.Drawing.Size(42, 22)
         Me.Blue1.TabIndex = 78
+        Me.Blue1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Blue2
         '
         Me.Blue2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Blue2.Location = New System.Drawing.Point(467, 50)
+        Me.Blue2.Location = New System.Drawing.Point(475, 59)
         Me.Blue2.Name = "Blue2"
         Me.Blue2.ReadOnly = True
         Me.Blue2.Size = New System.Drawing.Size(42, 22)
         Me.Blue2.TabIndex = 79
+        Me.Blue2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Blue3
         '
         Me.Blue3.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Blue3.Location = New System.Drawing.Point(467, 73)
+        Me.Blue3.Location = New System.Drawing.Point(475, 82)
         Me.Blue3.Name = "Blue3"
         Me.Blue3.ReadOnly = True
         Me.Blue3.Size = New System.Drawing.Size(42, 22)
         Me.Blue3.TabIndex = 80
+        Me.Blue3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Blue4
         '
         Me.Blue4.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Blue4.Location = New System.Drawing.Point(467, 96)
+        Me.Blue4.Location = New System.Drawing.Point(475, 105)
         Me.Blue4.Name = "Blue4"
         Me.Blue4.ReadOnly = True
         Me.Blue4.Size = New System.Drawing.Size(42, 22)
         Me.Blue4.TabIndex = 81
+        Me.Blue4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Blue5
         '
         Me.Blue5.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Blue5.Location = New System.Drawing.Point(467, 119)
+        Me.Blue5.Location = New System.Drawing.Point(475, 128)
         Me.Blue5.Name = "Blue5"
         Me.Blue5.ReadOnly = True
         Me.Blue5.Size = New System.Drawing.Size(42, 22)
         Me.Blue5.TabIndex = 82
+        Me.Blue5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PixelSlider
         '
-        Me.PixelSlider.Location = New System.Drawing.Point(423, 182)
+        Me.PixelSlider.Location = New System.Drawing.Point(431, 197)
         Me.PixelSlider.Maximum = 19
         Me.PixelSlider.Minimum = 1
         Me.PixelSlider.Name = "PixelSlider"
@@ -569,7 +602,7 @@ Partial Class Form1
         'Zoom
         '
         Me.Zoom.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zoom.Location = New System.Drawing.Point(421, 215)
+        Me.Zoom.Location = New System.Drawing.Point(429, 230)
         Me.Zoom.Name = "Zoom"
         Me.Zoom.Size = New System.Drawing.Size(151, 21)
         Me.Zoom.TabIndex = 85
@@ -579,7 +612,7 @@ Partial Class Form1
         'ColourCode
         '
         Me.ColourCode.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ColourCode.Location = New System.Drawing.Point(215, 129)
+        Me.ColourCode.Location = New System.Drawing.Point(215, 138)
         Me.ColourCode.Name = "ColourCode"
         Me.ColourCode.Size = New System.Drawing.Size(78, 27)
         Me.ColourCode.TabIndex = 91
@@ -589,7 +622,7 @@ Partial Class Form1
         '
         Me.RedTxt.BackColor = System.Drawing.Color.Red
         Me.RedTxt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RedTxt.Location = New System.Drawing.Point(84, 160)
+        Me.RedTxt.Location = New System.Drawing.Point(84, 175)
         Me.RedTxt.Name = "RedTxt"
         Me.RedTxt.ReadOnly = True
         Me.RedTxt.Size = New System.Drawing.Size(100, 29)
@@ -600,7 +633,7 @@ Partial Class Form1
         '
         Me.GreenTxt.BackColor = System.Drawing.Color.Green
         Me.GreenTxt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GreenTxt.Location = New System.Drawing.Point(84, 197)
+        Me.GreenTxt.Location = New System.Drawing.Point(84, 212)
         Me.GreenTxt.Name = "GreenTxt"
         Me.GreenTxt.ReadOnly = True
         Me.GreenTxt.Size = New System.Drawing.Size(100, 29)
@@ -611,18 +644,35 @@ Partial Class Form1
         '
         Me.BlueTxt.BackColor = System.Drawing.SystemColors.Highlight
         Me.BlueTxt.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BlueTxt.Location = New System.Drawing.Point(84, 235)
+        Me.BlueTxt.Location = New System.Drawing.Point(84, 250)
         Me.BlueTxt.Name = "BlueTxt"
         Me.BlueTxt.ReadOnly = True
         Me.BlueTxt.Size = New System.Drawing.Size(100, 29)
         Me.BlueTxt.TabIndex = 94
         Me.BlueTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'backgroundColourSetting
+        '
+        Me.backgroundColourSetting.Enabled = True
+        Me.backgroundColourSetting.Interval = 1
+        '
+        'StartBtn
+        '
+        Me.StartBtn.BackgroundImage = Global.colourpicker.My.Resources.Resources.pen_il
+        Me.StartBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.StartBtn.Font = New System.Drawing.Font("Segoe UI Light", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StartBtn.Location = New System.Drawing.Point(12, 36)
+        Me.StartBtn.Name = "StartBtn"
+        Me.StartBtn.Size = New System.Drawing.Size(172, 129)
+        Me.StartBtn.TabIndex = 0
+        Me.startTip.SetToolTip(Me.StartBtn, "Drag me to start picking a colour")
+        Me.StartBtn.UseVisualStyleBackColor = True
+        '
         'Slot5
         '
         Me.Slot5.BackColor = System.Drawing.Color.Transparent
         Me.Slot5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Slot5.Location = New System.Drawing.Point(515, 119)
+        Me.Slot5.Location = New System.Drawing.Point(523, 128)
         Me.Slot5.Name = "Slot5"
         Me.Slot5.Size = New System.Drawing.Size(22, 22)
         Me.Slot5.TabIndex = 90
@@ -632,7 +682,7 @@ Partial Class Form1
         '
         Me.Slot4.BackColor = System.Drawing.Color.Transparent
         Me.Slot4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Slot4.Location = New System.Drawing.Point(515, 96)
+        Me.Slot4.Location = New System.Drawing.Point(523, 105)
         Me.Slot4.Name = "Slot4"
         Me.Slot4.Size = New System.Drawing.Size(22, 22)
         Me.Slot4.TabIndex = 89
@@ -642,7 +692,7 @@ Partial Class Form1
         '
         Me.Slot3.BackColor = System.Drawing.Color.Transparent
         Me.Slot3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Slot3.Location = New System.Drawing.Point(515, 73)
+        Me.Slot3.Location = New System.Drawing.Point(523, 82)
         Me.Slot3.Name = "Slot3"
         Me.Slot3.Size = New System.Drawing.Size(22, 22)
         Me.Slot3.TabIndex = 88
@@ -652,7 +702,7 @@ Partial Class Form1
         '
         Me.Slot2.BackColor = System.Drawing.Color.Transparent
         Me.Slot2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Slot2.Location = New System.Drawing.Point(515, 50)
+        Me.Slot2.Location = New System.Drawing.Point(523, 59)
         Me.Slot2.Name = "Slot2"
         Me.Slot2.Size = New System.Drawing.Size(22, 22)
         Me.Slot2.TabIndex = 87
@@ -662,7 +712,7 @@ Partial Class Form1
         '
         Me.Slot1.BackColor = System.Drawing.Color.Transparent
         Me.Slot1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Slot1.Location = New System.Drawing.Point(515, 27)
+        Me.Slot1.Location = New System.Drawing.Point(523, 36)
         Me.Slot1.Name = "Slot1"
         Me.Slot1.Size = New System.Drawing.Size(22, 22)
         Me.Slot1.TabIndex = 86
@@ -673,23 +723,18 @@ Partial Class Form1
         Me.PictureBox1.BackColor = System.Drawing.Color.Black
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.PictureBox1.Location = New System.Drawing.Point(300, 150)
+        Me.PictureBox1.Location = New System.Drawing.Point(308, 165)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(115, 115)
         Me.PictureBox1.TabIndex = 50
         Me.PictureBox1.TabStop = False
-        '
-        'backgroundColourSetting
-        '
-        Me.backgroundColourSetting.Enabled = True
-        Me.backgroundColourSetting.Interval = 1
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
-        Me.ClientSize = New System.Drawing.Size(579, 279)
+        Me.ClientSize = New System.Drawing.Size(592, 291)
         Me.Controls.Add(Me.BlueTxt)
         Me.Controls.Add(Me.GreenTxt)
         Me.Controls.Add(Me.RedTxt)
@@ -747,7 +792,7 @@ Partial Class Form1
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Colour Picker v1.4.00.25 BETA"
+        Me.Text = "Colour Picker v1.4.00.70 BETA"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PixelSlider, System.ComponentModel.ISupportInitialize).EndInit()
@@ -830,4 +875,8 @@ Partial Class Form1
     Friend WithEvents Row5ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AllRowsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents backgroundColourSetting As Timer
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpWithColourPickerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents startTip As ToolTip
 End Class

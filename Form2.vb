@@ -32,6 +32,8 @@
         'cba to do it in one line, fat effort
         'anyways this block of code is for the combobox dropdown to change the background colour
 
+        opacitySlider.Value = My.Settings.opacitySetting * 100
+
     End Sub
 
     Private Sub backgroundColour_Tick(sender As Object, e As EventArgs) Handles backgroundColour.Tick
@@ -125,55 +127,90 @@
 
     Private Sub RadioButtonSmaller_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonSmaller.CheckedChanged
 
-        Form1.Height = 198
-        Form1.Width = 314
+        Form1.Height = 211
+        Form1.Width = 321
         'the height for the smaller size
+
+        My.Settings.windowsizeHeight = "211"
+        My.Settings.windowsizeWidth = "321"
+        My.Settings.windowsizeButton = "smaller"
 
     End Sub
 
     Private Sub RadioButtonSmall_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonSmall.CheckedChanged
 
-        Form1.Height = 310
-        Form1.Width = 314
+        Form1.Height = 330
+        Form1.Width = 321
         'the height for the small size
+
+        My.Settings.windowsizeHeight = "330"
+        My.Settings.windowsizeWidth = "321"
+        My.Settings.windowsizeButton = "small"
 
     End Sub
 
     Private Sub RadioButtonNormal_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonNormal.CheckedChanged
 
-        Form1.Height = 318
-        Form1.Width = 595
-        'the height for the smaller size
+        Form1.Height = 330
+        Form1.Width = 608
+        'the height for the normal size
+
+        My.Settings.windowsizeHeight = "330"
+        My.Settings.windowsizeWidth = "608"
+        My.Settings.windowsizeButton = "normal"
 
     End Sub
 
-    Private Sub opacitySet_Click(sender As Object, e As EventArgs) Handles opacitySet.Click
+    Private Sub sizeWindow_Tick(sender As Object, e As EventArgs) Handles sizeWindow.Tick
 
-        Form1.Opacity = opacityText.Text / 100
-        'only accepts values from 0 to 1, so this converts it from percentage to decimal
+        If My.Settings.windowsizeButton = "smaller" Then
 
-    End Sub
+            RadioButtonSmaller.Checked = True
 
-    Private Sub opacityText_KeyPress(sender As Object, e As KeyPressEventArgs) Handles opacityText.KeyPress
+        ElseIf My.Settings.windowsizeButton = "small" Then
 
-        If Asc(e.KeyChar) <> 8 Then
-            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
-                e.Handled = True
-            End If
-        End If
-        'to only allow numbers to be entered
+            RadioButtonSmall.Checked = True
 
-    End Sub
+        ElseIf My.Settings.windowsizeButton = "normal" Then
 
-    Private Sub opacityText_KeyDown(sender As Object, e As KeyEventArgs) Handles opacityText.KeyDown
-
-        If e.KeyCode = Keys.Enter Then
-
-            Form1.Opacity = opacityText.Text / 100
-            'only accepts values from 0 to 1, so this converts it from percentage to decimal
+            RadioButtonNormal.Checked = True
 
         End If
-        'if the enter key was to be pressed
+        'self explanatory code above to keep the radio button checked
 
     End Sub
+
+    Private Sub opacitySilderTimer_Tick(sender As Object, e As EventArgs) Handles opacitySilderTimer.Tick
+
+        Dim theSliderValue As Decimal
+
+        theSliderValue = opacitySlider.Value
+
+        If theSliderValue > 50 Then
+
+            Form1.Opacity = theSliderValue / 100
+            Me.Opacity = theSliderValue / 100
+            Form3.Opacity = theSliderValue / 100
+            'to change the opacity of both forms
+
+            My.Settings.opacitySetting = theSliderValue / 100
+            'to set the value in the settings
+
+        End If
+        'suprisingly, an if statement works better than a while statement (when run within a timer anyway)
+
+    End Sub
+
+    Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+
+        If e.CloseReason = CloseReason.UserClosing Then
+
+            e.Cancel = True
+            Me.Hide()
+
+        End If
+        'code to HIDE the form, not close it (on X button press)
+
+    End Sub
+
 End Class

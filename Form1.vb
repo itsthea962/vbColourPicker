@@ -1223,13 +1223,24 @@
         Me.MaximizeBox = False
         'stop the window being maximised in size
 
+
         backgroundColourSetting.Start()
         'starts the timer that constantly saves the background colour setting
 
         Dim theBackgroundColourOfThisForm As Color
-
         theBackgroundColourOfThisForm = Me.BackColor
         'code above to set the preliminary/preloaded background colour thats in the settings
+
+
+        Dim theHeightOfThisForm As String
+        theHeightOfThisForm = Me.Height
+
+        Dim theWidthOfThisForm As String
+        theWidthOfThisForm = Me.Width
+        'code above to load the preliminary/preloaded window size that's in the settings
+
+        Me.Opacity = My.Settings.opacitySetting
+        Form2.Opacity = My.Settings.opacitySetting
 
     End Sub
 
@@ -1575,7 +1586,71 @@
 
         Me.BackColor = My.Settings.backcolour
         Form2.BackColor = My.Settings.backcolour
+        Form3.BackColor = My.Settings.backcolour
         'just sets the background colour to the saved colour in the settings
+
+    End Sub
+
+    Private Sub Panel_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel.MouseDown
+
+        If Hex1.Text = "" Then
+
+            Hex1.Text = ColourCode.Text
+            Red1.Text = RedTxt.Text
+            Green1.Text = GreenTxt.Text
+            Blue1.Text = BlueTxt.Text
+
+            Slot1.BackColor = Panel.BackColor
+
+        ElseIf Hex2.Text = "" Then
+
+            Hex2.Text = ColourCode.Text
+            Red2.Text = RedTxt.Text
+            Green2.Text = GreenTxt.Text
+            Blue2.Text = BlueTxt.Text
+
+            Slot2.BackColor = Panel.BackColor
+
+        ElseIf Hex3.Text = "" Then
+
+            Hex3.Text = ColourCode.Text
+            Red3.Text = RedTxt.Text
+            Green3.Text = GreenTxt.Text
+            Blue3.Text = BlueTxt.Text
+
+            Slot3.BackColor = Panel.BackColor
+
+        ElseIf Hex4.Text = "" Then
+
+            Hex4.Text = ColourCode.Text
+            Red4.Text = RedTxt.Text
+            Green4.Text = GreenTxt.Text
+            Blue4.Text = BlueTxt.Text
+
+            Slot4.BackColor = Panel.BackColor
+
+        ElseIf Hex5.Text = "" Then
+
+            Hex5.Text = ColourCode.Text
+            Red5.Text = RedTxt.Text
+            Green5.Text = GreenTxt.Text
+            Blue5.Text = BlueTxt.Text
+
+            Slot5.BackColor = Panel.BackColor
+            'all of the above (in this sub) is to check if the next available slot is free, and if it is it will save the hex, rgb
+
+        Else
+
+            MessageBox.Show("Please delete a row to free up space for more values.", "No space remaining")
+
+        End If
+
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+
+        Form3.Show()
+        'opens the about colour picker form
 
     End Sub
 End Class
