@@ -1,3 +1,5 @@
+# VB Colour Picker
+
 A simple Colour Picker made in VB.NET
 
 A colour picker with all features such as HEX, R,G and B values of the pixel being hovered, zoom function, mouse postion and colour saving.
