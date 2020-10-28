@@ -10,4 +10,4 @@ Use the beta at your own risk (it's rather unbuggy at the moment but has uncompl
 
 Feel free to use these files, just credit my GitHub page when doing so
 
-![alt text](https://i.imgur.com/4MBUtUl.png)
+![](https://i.imgur.com/4MBUtUl.png)
