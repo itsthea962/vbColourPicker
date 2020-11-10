@@ -12,6 +12,6 @@ Feel free to use these files, just credit my GitHub page when doing so
 
 v1.4 Is the latest, as seen below, brings so^me new spicy customisation features as you can see (plus more)
 
-![v1.4 PICTURE ONE](https://i.imgur.com/d2GRFA3.png)
+![v1.4 PICTURE ONE](https://i.imgur.com/9o9hOyG.png)
 
-![v1.4 PICTURE TWO](https://i.imgur.com/wyV8Eno.png)
+![v1.4 PICTURE TWO](https://i.imgur.com/OU2K7UI.png)
