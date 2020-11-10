@@ -1,0 +1,46 @@
+UPDATE LOG - vbColourPicker created by théo
+
+v1.4
+
+Major changes to customization
+This includes new options and saving state plus a few more
+Slight design revamp
+Optimised slightly
+Honestly I've forgot what I've changed
+I think I added the feature to put your own R, G, B and HEX values
+Idk really lol
+Oh yeah I smoothed the animations slightly
+Added help
+
+v1.3.2
+
+Added the option to highlight and copy the R, G and B values in the textboxes.
+Adjusted the font slightly.
+
+v1.2.9
+
+Fixed the bug where the label that tells what zoom you were on wouldn't show the value until you started picking a colour.
+Fixed the bug the colour code was automatically shortened in very rare cases.
+
+v1.2.5
+
+Added different levels of zoom (1 - 15, default = 5, original = 5)
+Added the option to see the actual colour of the colour you have saved.
+Changed the way colours are picked; now drag out the capture colour box and release left-click to capture.
+
+v1.2.1
+
+Colour Picker now automatically starts to pick the colour.
+Changed the design slightly.
+Added the option to save up to 5 colours with their HEX, R, G and B values.
+
+v1.1.5
+
+Added the ability to zoom in on the mouse cursor.
+Added the label that shows the hex colour code value of the colour you were hovering over.
+
+v1.0.0
+
+Colour Picker released with basic funtions (solid colour preview, R, G and B values).
+Solid colour panel shows what colour you are hovering over.
+Enter to start picking colour and Backspace to capture it.
