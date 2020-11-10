@@ -8,7 +8,7 @@ https://github.com/theo3334/vbColourPicker/releases has the releases including t
 
 Use the betas at your own risk
 
-Feel free to use these files, just credit my GitHub page when doing so
+Feel free to use these files, just credit my GitHub page if you want :-)
 
 v1.4 Is the latest, as seen below, brings so^me new spicy customisation features as you can see (plus more)
 
