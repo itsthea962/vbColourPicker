@@ -544,57 +544,71 @@ Public Class Form1
 
     Private Sub AddCode_Click(sender As Object, e As EventArgs) Handles AddHex.Click
 
-        If Hex1.Text = "" Then
+        Try
 
-            Hex1.Text = ColourCode.Text
-            Red1.Text = RedTxt.Text
-            Green1.Text = GreenTxt.Text
-            Blue1.Text = BlueTxt.Text
+            If IsNumeric(RedTxt.Text And GreenTxt.Text And BlueTxt.Text) Then
 
-            Slot1.BackColor = Panel.BackColor
+                If Hex1.Text = "" Then
 
-        ElseIf Hex2.Text = "" Then
+                    Hex1.Text = ColourCode.Text
+                    Red1.Text = RedTxt.Text
+                    Green1.Text = GreenTxt.Text
+                    Blue1.Text = BlueTxt.Text
 
-            Hex2.Text = ColourCode.Text
-            Red2.Text = RedTxt.Text
-            Green2.Text = GreenTxt.Text
-            Blue2.Text = BlueTxt.Text
+                    Slot1.BackColor = Panel.BackColor
 
-            Slot2.BackColor = Panel.BackColor
+                ElseIf Hex2.Text = "" Then
 
-        ElseIf Hex3.Text = "" Then
+                    Hex2.Text = ColourCode.Text
+                    Red2.Text = RedTxt.Text
+                    Green2.Text = GreenTxt.Text
+                    Blue2.Text = BlueTxt.Text
 
-            Hex3.Text = ColourCode.Text
-            Red3.Text = RedTxt.Text
-            Green3.Text = GreenTxt.Text
-            Blue3.Text = BlueTxt.Text
+                    Slot2.BackColor = Panel.BackColor
 
-            Slot3.BackColor = Panel.BackColor
+                ElseIf Hex3.Text = "" Then
 
-        ElseIf Hex4.Text = "" Then
+                    Hex3.Text = ColourCode.Text
+                    Red3.Text = RedTxt.Text
+                    Green3.Text = GreenTxt.Text
+                    Blue3.Text = BlueTxt.Text
 
-            Hex4.Text = ColourCode.Text
-            Red4.Text = RedTxt.Text
-            Green4.Text = GreenTxt.Text
-            Blue4.Text = BlueTxt.Text
+                    Slot3.BackColor = Panel.BackColor
 
-            Slot4.BackColor = Panel.BackColor
+                ElseIf Hex4.Text = "" Then
 
-        ElseIf Hex5.Text = "" Then
+                    Hex4.Text = ColourCode.Text
+                    Red4.Text = RedTxt.Text
+                    Green4.Text = GreenTxt.Text
+                    Blue4.Text = BlueTxt.Text
 
-            Hex5.Text = ColourCode.Text
-            Red5.Text = RedTxt.Text
-            Green5.Text = GreenTxt.Text
-            Blue5.Text = BlueTxt.Text
+                    Slot4.BackColor = Panel.BackColor
 
-            Slot5.BackColor = Panel.BackColor
-            'all of the above (in this sub) is to check if the next available slot is free, and if it is it will save the hex, rgb
+                ElseIf Hex5.Text = "" Then
 
-        Else
+                    Hex5.Text = ColourCode.Text
+                    Red5.Text = RedTxt.Text
+                    Green5.Text = GreenTxt.Text
+                    Blue5.Text = BlueTxt.Text
 
-            MessageBox.Show("Please delete a row to free up space for more values.", "No space remaining")
 
-        End If
+                    Slot5.BackColor = Panel.BackColor
+                    'all of the above (in this sub) is to check if the next available slot is free, and if it is it will save the hex, rgb
+
+                Else
+
+                    MessageBox.Show("Please delete a row to free up space for more values.", "No space remaining")
+
+                End If
+
+            End If
+
+        Catch err As Exception
+
+            MessageBox.Show("Error occurred", "Colour Picker", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            'to only allow numbers to be added
+
+        End Try
 
     End Sub
 
@@ -1242,82 +1256,90 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Me.MaximizeBox = False
-        'stop the window being maximised in size
+        Try
 
-        Me.MinimizeBox = False
-        'to remove the minimize box cos why not
+            Me.MaximizeBox = False
+            'stop the window being maximised in size
 
-        backgroundColourSetting.Start()
-        'starts the timer that constantly saves the background colour setting
+            Me.MinimizeBox = False
+            'to remove the minimize box cos why not
 
-        Dim theBackgroundColourOfThisForm As Color
-        theBackgroundColourOfThisForm = Me.BackColor
-        'code above to set the preliminary/preloaded background colour thats in the settings
+            backgroundColourSetting.Start()
+            'starts the timer that constantly saves the background colour setting
 
-        Dim theHeightOfThisForm As String
-        theHeightOfThisForm = Me.Height
+            Dim theBackgroundColourOfThisForm As Color
+            theBackgroundColourOfThisForm = Me.BackColor
+            'code above to set the preliminary/preloaded background colour thats in the settings
 
-        Dim theWidthOfThisForm As String
-        theWidthOfThisForm = Me.Width
-        'code above to load the preliminary/preloaded window size that's in the settings
+            Dim theHeightOfThisForm As String
+            theHeightOfThisForm = Me.Height
 
-        Me.Opacity = My.Settings.opacitySetting
-        Form2.Opacity = My.Settings.opacitySetting
-        'code above to set the opacity of the windows
+            Dim theWidthOfThisForm As String
+            theWidthOfThisForm = Me.Width
+            'code above to load the preliminary/preloaded window size that's in the settings
 
-        Me.TopMost = My.Settings.alwaysOnTop
+            Me.Opacity = My.Settings.opacitySetting
+            Form2.Opacity = My.Settings.opacitySetting
+            'code above to set the opacity of the windows
 
-        Dim solidStartupColour As Color = My.Settings.solidColour
-        Panel.BackColor = solidStartupColour
-        'code to set the solid colour panel to the previous colour
+            Me.TopMost = My.Settings.alwaysOnTop
 
-        RGBHEXSOLIDTIMER.Start()
+            Dim solidStartupColour As Color = My.Settings.solidColour
+            Panel.BackColor = solidStartupColour
+            'code to set the solid colour panel to the previous colour
 
-        RedTxt.Text = My.Settings.red
-        GreenTxt.Text = My.Settings.green
-        BlueTxt.Text = My.Settings.blue
-        ColourCode.Text = My.Settings.hexMain
-        'code above to set the last values of each box etc yes
+            RGBHEXSOLIDTIMER.Start()
 
-        savedColourTimer.Start()
+            RedTxt.Text = My.Settings.red
+            GreenTxt.Text = My.Settings.green
+            BlueTxt.Text = My.Settings.blue
+            ColourCode.Text = My.Settings.hexMain
+            'code above to set the last values of each box etc yes
 
-        Hex1.Text = My.Settings.hexOne
-        Hex2.Text = My.Settings.hexTwo
-        Hex3.Text = My.Settings.HexThree
-        Hex4.Text = My.Settings.HexFour
-        Hex5.Text = My.Settings.HexFive
+            savedColourTimer.Start()
 
-        Red1.Text = My.Settings.redOne
-        Red2.Text = My.Settings.redTwo
-        Red3.Text = My.Settings.redThree
-        Red4.Text = My.Settings.redFour
-        Red5.Text = My.Settings.redFive
+            Hex1.Text = My.Settings.hexOne
+            Hex2.Text = My.Settings.hexTwo
+            Hex3.Text = My.Settings.HexThree
+            Hex4.Text = My.Settings.HexFour
+            Hex5.Text = My.Settings.HexFive
 
-        Green1.Text = My.Settings.greenOne
-        Green2.Text = My.Settings.greenTwo
-        Green3.Text = My.Settings.greenThree
-        Green4.Text = My.Settings.greenFour
-        Green5.Text = My.Settings.greenFive
+            Red1.Text = My.Settings.redOne
+            Red2.Text = My.Settings.redTwo
+            Red3.Text = My.Settings.redThree
+            Red4.Text = My.Settings.redFour
+            Red5.Text = My.Settings.redFive
 
-        Blue1.Text = My.Settings.blueOne
-        Blue2.Text = My.Settings.blueTwo
-        Blue3.Text = My.Settings.blueThree
-        Blue4.Text = My.Settings.blueFour
-        Blue5.Text = My.Settings.blueFive
-        'all 4 blocks of code above are to load the last values of each box stored in the settings
+            Green1.Text = My.Settings.greenOne
+            Green2.Text = My.Settings.greenTwo
+            Green3.Text = My.Settings.greenThree
+            Green4.Text = My.Settings.greenFour
+            Green5.Text = My.Settings.greenFive
 
-        Slot1.BackColor = My.Settings.colourOne
-        Slot2.BackColor = My.Settings.colourTwo
-        Slot3.BackColor = My.Settings.colourThree
-        Slot4.BackColor = My.Settings.colourFour
-        Slot5.BackColor = My.Settings.colourFive
-        'block of code above to load the last saved colours, if any
+            Blue1.Text = My.Settings.blueOne
+            Blue2.Text = My.Settings.blueTwo
+            Blue3.Text = My.Settings.blueThree
+            Blue4.Text = My.Settings.blueFour
+            Blue5.Text = My.Settings.blueFive
+            'all 4 blocks of code above are to load the last values of each box stored in the settings
 
-        PixelSlider.Value = My.Settings.zoomLevel
+            Slot1.BackColor = My.Settings.colourOne
+            Slot2.BackColor = My.Settings.colourTwo
+            Slot3.BackColor = My.Settings.colourThree
+            Slot4.BackColor = My.Settings.colourFour
+            Slot5.BackColor = My.Settings.colourFive
+            'block of code above to load the last saved colours, if any
 
-        Zoom.Text = "Zoom x" & PixelSlider.Value
-        'to set the text as I cannot be arsed to change the inteference with other code LMAO
+            PixelSlider.Value = My.Settings.zoomLevel
+
+            Zoom.Text = "Zoom x" & PixelSlider.Value
+            'to set the text as I cannot be arsed to change the inteference with other code LMAO
+
+        Catch err As Exception
+
+            'do nothing
+
+        End Try
 
     End Sub
 
@@ -1816,36 +1838,44 @@ Public Class Form1
 
     Private Sub savedColourTimer_Tick(sender As Object, e As EventArgs) Handles savedColourTimer.Tick
 
-        My.Settings.hexOne = Hex1.Text
-        My.Settings.hexTwo = Hex2.Text
-        My.Settings.HexThree = Hex3.Text
-        My.Settings.HexFour = Hex4.Text
-        My.Settings.HexFive = Hex5.Text
+        Try
 
-        My.Settings.redOne = Red1.Text
-        My.Settings.redTwo = Red2.Text
-        My.Settings.redThree = Red3.Text
-        My.Settings.redFour = Red4.Text
-        My.Settings.redFive = Red5.Text
+            My.Settings.hexOne = Hex1.Text
+            My.Settings.hexTwo = Hex2.Text
+            My.Settings.HexThree = Hex3.Text
+            My.Settings.HexFour = Hex4.Text
+            My.Settings.HexFive = Hex5.Text
 
-        My.Settings.greenOne = Green1.Text
-        My.Settings.greenTwo = Green2.Text
-        My.Settings.greenThree = Green3.Text
-        My.Settings.greenFour = Green4.Text
-        My.Settings.greenFive = Green5.Text
+            My.Settings.redOne = Red1.Text
+            My.Settings.redTwo = Red2.Text
+            My.Settings.redThree = Red3.Text
+            My.Settings.redFour = Red4.Text
+            My.Settings.redFive = Red5.Text
 
-        My.Settings.blueOne = Blue1.Text
-        My.Settings.blueTwo = Blue2.Text
-        My.Settings.blueThree = Blue3.Text
-        My.Settings.blueFour = Blue4.Text
-        My.Settings.blueFive = Blue5.Text
+            My.Settings.greenOne = Green1.Text
+            My.Settings.greenTwo = Green2.Text
+            My.Settings.greenThree = Green3.Text
+            My.Settings.greenFour = Green4.Text
+            My.Settings.greenFive = Green5.Text
 
-        My.Settings.colourOne = Slot1.BackColor
-        My.Settings.colourTwo = Slot2.BackColor
-        My.Settings.colourThree = Slot3.BackColor
-        My.Settings.colourFour = Slot4.BackColor
-        My.Settings.colourFive = Slot5.BackColor
-        'blocks of code above are to set the settings for the saved colours and the colour preview too
+            My.Settings.blueOne = Blue1.Text
+            My.Settings.blueTwo = Blue2.Text
+            My.Settings.blueThree = Blue3.Text
+            My.Settings.blueFour = Blue4.Text
+            My.Settings.blueFive = Blue5.Text
+
+            My.Settings.colourOne = Slot1.BackColor
+            My.Settings.colourTwo = Slot2.BackColor
+            My.Settings.colourThree = Slot3.BackColor
+            My.Settings.colourFour = Slot4.BackColor
+            My.Settings.colourFive = Slot5.BackColor
+            'blocks of code above are to set the settings for the saved colours and the colour preview too
+
+        Catch err As Exception
+
+
+
+        End Try
 
     End Sub
 
@@ -1853,396 +1883,402 @@ Public Class Form1
 
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
 
-            e.Handled = True
-            'to stop the DING on enter key
+            Dim intValue As Integer
 
-            Try
+            If Integer.TryParse(RedTxt.Text, intValue) AndAlso intValue > -1 AndAlso intValue < 256 Then
 
-                Dim RedCode As Integer = RedTxt.Text
-                Dim GreenCode As Integer = GreenTxt.Text
-                Dim BlueCode As Integer = BlueTxt.Text
+                e.Handled = True
+                'to stop the DING on enter key
 
-                Dim hexStringRed As String
-                Dim hexStringGreen As String
-                Dim hexStringBlue As String
+                Try
 
-                hexStringRed = Hex(RedCode)
-                hexStringGreen = Hex(GreenCode)
-                hexStringBlue = Hex(BlueCode)
+                    Dim RedCode As Integer = RedTxt.Text
+                    Dim GreenCode As Integer = GreenTxt.Text
+                    Dim BlueCode As Integer = BlueTxt.Text
 
-                Dim panelBackColour As Color = Color.FromArgb(RedCode, GreenCode, BlueCode)
+                    Dim hexStringRed As String
+                    Dim hexStringGreen As String
+                    Dim hexStringBlue As String
 
-                Panel.BackColor = panelBackColour
+                    hexStringRed = Hex(RedCode)
+                    hexStringGreen = Hex(GreenCode)
+                    hexStringBlue = Hex(BlueCode)
 
-                ColourCode.Text = hexStringRed & hexStringGreen & hexStringBlue
+                    Dim panelBackColour As Color = Color.FromArgb(RedCode, GreenCode, BlueCode)
 
-                If RedCode = "0" Then
+                    Panel.BackColor = panelBackColour
 
-                    hexStringRed = 0 & 0
-                    'to get two zeros in the colour code and not just one
+                    ColourCode.Text = hexStringRed & hexStringGreen & hexStringBlue
 
-                End If
+                    If RedCode = "0" Then
 
-                If GreenCode = "0" Then
+                        hexStringRed = 0 & 0
+                        'to get two zeros in the colour code and not just one
 
-                    hexStringGreen = 0 & 0
-                    'to get two zeros in the colour code and not just one
+                    End If
 
-                End If
+                    If GreenCode = "0" Then
 
-                If BlueCode = "0" Then
+                        hexStringGreen = 0 & 0
+                        'to get two zeros in the colour code and not just one
 
-                    hexStringBlue = 0 & 0
-                    'to get two zeros in the colour code and not just one
+                    End If
 
-                End If
+                    If BlueCode = "0" Then
 
+                        hexStringBlue = 0 & 0
+                        'to get two zeros in the colour code and not just one
 
+                    End If
 
-                If RedCode = "1" Then
 
-                    hexStringRed = 0 & 1
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "1" Then
 
-                If GreenCode = "1" Then
+                        hexStringRed = 0 & 1
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 1
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "1" Then
 
-                If BlueCode = "1" Then
+                        hexStringGreen = 0 & 1
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 1
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "1" Then
 
+                        hexStringBlue = 0 & 1
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "2" Then
 
-                    hexStringRed = 0 & 2
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "2" Then
 
-                If GreenCode = "2" Then
+                        hexStringRed = 0 & 2
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 2
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "2" Then
 
-                If BlueCode = "2" Then
+                        hexStringGreen = 0 & 2
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 2
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "2" Then
 
+                        hexStringBlue = 0 & 2
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "3" Then
 
-                    hexStringRed = 0 & 3
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "3" Then
 
-                If GreenCode = "3" Then
+                        hexStringRed = 0 & 3
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 3
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "3" Then
 
-                If BlueCode = "3" Then
+                        hexStringGreen = 0 & 3
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 3
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "3" Then
 
+                        hexStringBlue = 0 & 3
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "4" Then
 
-                    hexStringRed = 0 & 4
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "4" Then
 
-                If GreenCode = "4" Then
+                        hexStringRed = 0 & 4
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 4
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "4" Then
 
-                If BlueCode = "4" Then
+                        hexStringGreen = 0 & 4
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 4
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "4" Then
 
+                        hexStringBlue = 0 & 4
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "5" Then
 
-                    hexStringRed = 0 & 5
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "5" Then
 
-                If GreenCode = "5" Then
+                        hexStringRed = 0 & 5
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 5
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "5" Then
 
-                If BlueCode = "5" Then
+                        hexStringGreen = 0 & 5
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 5
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "5" Then
 
+                        hexStringBlue = 0 & 5
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "6" Then
 
-                    hexStringRed = 0 & 6
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "6" Then
 
-                If GreenCode = "6" Then
+                        hexStringRed = 0 & 6
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 6
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "6" Then
 
-                If BlueCode = "6" Then
+                        hexStringGreen = 0 & 6
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 6
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "6" Then
 
+                        hexStringBlue = 0 & 6
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "7" Then
 
-                    hexStringRed = 0 & 7
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "7" Then
 
-                If GreenCode = "7" Then
+                        hexStringRed = 0 & 7
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 7
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "7" Then
 
-                If BlueCode = "7" Then
+                        hexStringGreen = 0 & 7
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 7
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "7" Then
 
+                        hexStringBlue = 0 & 7
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "8" Then
 
-                    hexStringRed = 0 & 8
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "8" Then
 
-                If GreenCode = "8" Then
+                        hexStringRed = 0 & 8
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 8
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "8" Then
 
-                If BlueCode = "8" Then
+                        hexStringGreen = 0 & 8
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 8
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "8" Then
 
+                        hexStringBlue = 0 & 8
+                        'to get the zero in the colour code
 
+                    End If
 
-                If RedCode = "9" Then
 
-                    hexStringRed = 0 & 9
-                    'to get the zero in the colour code
 
-                End If
+                    If RedCode = "9" Then
 
-                If GreenCode = "9" Then
+                        hexStringRed = 0 & 9
+                        'to get the zero in the colour code
 
-                    hexStringGreen = 0 & 9
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If GreenCode = "9" Then
 
-                If BlueCode = "9" Then
+                        hexStringGreen = 0 & 9
+                        'to get the zero in the colour code
 
-                    hexStringBlue = 0 & 9
-                    'to get the zero in the colour code
+                    End If
 
-                End If
+                    If BlueCode = "9" Then
 
+                        hexStringBlue = 0 & 9
+                        'to get the zero in the colour code
 
-                If hexStringRed = "A" Then
+                    End If
 
-                    hexStringRed = 0 & "A"
-                    'to get the missing zero
 
-                End If
+                    If hexStringRed = "A" Then
 
-                If hexStringGreen = "A" Then
+                        hexStringRed = 0 & "A"
+                        'to get the missing zero
 
-                    hexStringGreen = 0 & "A"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringGreen = "A" Then
 
-                If hexStringBlue = "A" Then
+                        hexStringGreen = 0 & "A"
+                        'to get the missing zero
 
-                    hexStringBlue = 0 & "A"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringBlue = "A" Then
 
+                        hexStringBlue = 0 & "A"
+                        'to get the missing zero
 
-                If hexStringRed = "B" Then
+                    End If
 
-                    hexStringRed = 0 & "B"
-                    'to get the missing zero
 
-                End If
+                    If hexStringRed = "B" Then
 
-                If hexStringGreen = "B" Then
+                        hexStringRed = 0 & "B"
+                        'to get the missing zero
 
-                    hexStringGreen = 0 & "B"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringGreen = "B" Then
 
-                If hexStringBlue = "B" Then
+                        hexStringGreen = 0 & "B"
+                        'to get the missing zero
 
-                    hexStringBlue = 0 & "B"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringBlue = "B" Then
 
+                        hexStringBlue = 0 & "B"
+                        'to get the missing zero
 
-                If hexStringRed = "C" Then
+                    End If
 
-                    hexStringRed = 0 & "C"
-                    'to get the missing zero
 
-                End If
+                    If hexStringRed = "C" Then
 
-                If hexStringGreen = "C" Then
+                        hexStringRed = 0 & "C"
+                        'to get the missing zero
 
-                    hexStringGreen = 0 & "C"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringGreen = "C" Then
 
-                If hexStringBlue = "C" Then
+                        hexStringGreen = 0 & "C"
+                        'to get the missing zero
 
-                    hexStringBlue = 0 & "C"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringBlue = "C" Then
 
+                        hexStringBlue = 0 & "C"
+                        'to get the missing zero
 
-                If hexStringRed = "D" Then
+                    End If
 
-                    hexStringRed = 0 & "D"
-                    'to get the missing zero
 
-                End If
+                    If hexStringRed = "D" Then
 
-                If hexStringGreen = "D" Then
+                        hexStringRed = 0 & "D"
+                        'to get the missing zero
 
-                    hexStringGreen = 0 & "D"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringGreen = "D" Then
 
-                If hexStringBlue = "D" Then
+                        hexStringGreen = 0 & "D"
+                        'to get the missing zero
 
-                    hexStringBlue = 0 & "D"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringBlue = "D" Then
 
+                        hexStringBlue = 0 & "D"
+                        'to get the missing zero
 
-                If hexStringRed = "E" Then
+                    End If
 
-                    hexStringRed = 0 & "E"
-                    'to get the missing zero
 
-                End If
+                    If hexStringRed = "E" Then
 
-                If hexStringGreen = "E" Then
+                        hexStringRed = 0 & "E"
+                        'to get the missing zero
 
-                    hexStringGreen = 0 & "E"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringGreen = "E" Then
 
-                If hexStringBlue = "E" Then
+                        hexStringGreen = 0 & "E"
+                        'to get the missing zero
 
-                    hexStringBlue = 0 & "E"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringBlue = "E" Then
 
+                        hexStringBlue = 0 & "E"
+                        'to get the missing zero
 
-                If hexStringRed = "F" Then
+                    End If
 
-                    hexStringRed = 0 & "F"
-                    'to get the missing zero
 
-                End If
+                    If hexStringRed = "F" Then
 
-                If hexStringGreen = "F" Then
+                        hexStringRed = 0 & "F"
+                        'to get the missing zero
 
-                    hexStringGreen = 0 & "F"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringGreen = "F" Then
 
-                If hexStringBlue = "F" Then
+                        hexStringGreen = 0 & "F"
+                        'to get the missing zero
 
-                    hexStringBlue = 0 & "F"
-                    'to get the missing zero
+                    End If
 
-                End If
+                    If hexStringBlue = "F" Then
 
-                ColourCode.Text = hexStringRed & hexStringGreen & hexStringBlue
+                        hexStringBlue = 0 & "F"
+                        'to get the missing zero
 
-            Catch err As Exception
+                    End If
 
-                MessageBox.Show("Error occurred", "Colour Picker", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    ColourCode.Text = hexStringRed & hexStringGreen & hexStringBlue
 
-            End Try
+                Catch err As Exception
+
+                    MessageBox.Show("Error occurred", "Colour Picker", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+                End Try
+
+            End If
 
         End If
 
@@ -2252,6 +2288,10 @@ Public Class Form1
 
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
 
+            'Dim intValue As Integer
+
+            'If Integer.TryParse(GreenTxt.Text, intValue) AndAlso intValue > 0 AndAlso intValue < 256 Then
+
             e.Handled = True
             'to stop the DING on enter key
 
@@ -2640,6 +2680,8 @@ Public Class Form1
                 MessageBox.Show("Error occurred", "Colour Picker", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End Try
+
+            'End If
 
         End If
 
@@ -2649,6 +2691,10 @@ Public Class Form1
 
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
 
+            'Dim intValue As Integer
+
+            'If Integer.TryParse(BlueTxt.Text, intValue) AndAlso intValue > 0 AndAlso intValue < 256 Then
+
             e.Handled = True
             'to stop the DING on enter key
 
@@ -3037,6 +3083,8 @@ Public Class Form1
                 MessageBox.Show("Error occurred", "Colour Picker", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
 
             End Try
+
+            'End If
 
         End If
 
@@ -3075,4 +3123,15 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Panel_MouseEnter(sender As Object, e As EventArgs) Handles Panel.MouseEnter
+
+        Cursor = Cursors.Hand()
+
+    End Sub
+
+    Private Sub Panel_MouseLeave(sender As Object, e As EventArgs) Handles Panel.MouseLeave
+
+        Cursor = Cursors.Default()
+
+    End Sub
 End Class

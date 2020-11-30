@@ -158,7 +158,7 @@ Partial Class Form1
         '
         'RedCopy
         '
-        Me.RedCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RedCopy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RedCopy.Location = New System.Drawing.Point(190, 174)
         Me.RedCopy.Name = "RedCopy"
         Me.RedCopy.Size = New System.Drawing.Size(47, 32)
@@ -168,7 +168,7 @@ Partial Class Form1
         '
         'GreenCopy
         '
-        Me.GreenCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GreenCopy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GreenCopy.Location = New System.Drawing.Point(190, 211)
         Me.GreenCopy.Name = "GreenCopy"
         Me.GreenCopy.Size = New System.Drawing.Size(47, 31)
@@ -178,7 +178,7 @@ Partial Class Form1
         '
         'BlueCopy
         '
-        Me.BlueCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BlueCopy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BlueCopy.Location = New System.Drawing.Point(190, 248)
         Me.BlueCopy.Name = "BlueCopy"
         Me.BlueCopy.Size = New System.Drawing.Size(47, 32)
@@ -188,6 +188,7 @@ Partial Class Form1
         '
         'HexCopy
         '
+        Me.HexCopy.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HexCopy.Location = New System.Drawing.Point(245, 174)
         Me.HexCopy.Name = "HexCopy"
         Me.HexCopy.Size = New System.Drawing.Size(48, 106)
@@ -197,12 +198,12 @@ Partial Class Form1
         '
         'AddHex
         '
-        Me.AddHex.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddHex.Font = New System.Drawing.Font("Segoe UI Semilight", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddHex.Location = New System.Drawing.Point(431, 165)
         Me.AddHex.Name = "AddHex"
         Me.AddHex.Size = New System.Drawing.Size(149, 32)
         Me.AddHex.TabIndex = 19
-        Me.AddHex.Text = "ADD HEX, R, G AND B"
+        Me.AddHex.Text = "ADD CURRENT VALUES"
         Me.AddHex.UseVisualStyleBackColor = True
         '
         'MenuStrip1
@@ -339,7 +340,7 @@ Partial Class Form1
         '
         'Del1
         '
-        Me.Del1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del1.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Del1.Location = New System.Drawing.Point(551, 36)
         Me.Del1.Name = "Del1"
         Me.Del1.Size = New System.Drawing.Size(29, 22)
@@ -349,7 +350,7 @@ Partial Class Form1
         '
         'Del2
         '
-        Me.Del2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del2.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Del2.Location = New System.Drawing.Point(551, 59)
         Me.Del2.Name = "Del2"
         Me.Del2.Size = New System.Drawing.Size(29, 22)
@@ -359,7 +360,7 @@ Partial Class Form1
         '
         'Del3
         '
-        Me.Del3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del3.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Del3.Location = New System.Drawing.Point(551, 82)
         Me.Del3.Name = "Del3"
         Me.Del3.Size = New System.Drawing.Size(29, 22)
@@ -369,7 +370,7 @@ Partial Class Form1
         '
         'Del4
         '
-        Me.Del4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del4.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Del4.Location = New System.Drawing.Point(551, 105)
         Me.Del4.Name = "Del4"
         Me.Del4.Size = New System.Drawing.Size(29, 22)
@@ -379,7 +380,7 @@ Partial Class Form1
         '
         'Del5
         '
-        Me.Del5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Del5.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Del5.Location = New System.Drawing.Point(551, 128)
         Me.Del5.Name = "Del5"
         Me.Del5.Size = New System.Drawing.Size(29, 22)
@@ -389,7 +390,7 @@ Partial Class Form1
         '
         'XYmouse
         '
-        Me.XYmouse.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XYmouse.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.XYmouse.Location = New System.Drawing.Point(431, 259)
         Me.XYmouse.Name = "XYmouse"
         Me.XYmouse.Size = New System.Drawing.Size(149, 21)
@@ -399,6 +400,7 @@ Partial Class Form1
         '
         'Hex1
         '
+        Me.Hex1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hex1.Location = New System.Drawing.Point(308, 36)
         Me.Hex1.Name = "Hex1"
         Me.Hex1.ReadOnly = True
@@ -408,6 +410,7 @@ Partial Class Form1
         '
         'Hex2
         '
+        Me.Hex2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hex2.Location = New System.Drawing.Point(308, 59)
         Me.Hex2.Name = "Hex2"
         Me.Hex2.ReadOnly = True
@@ -417,6 +420,7 @@ Partial Class Form1
         '
         'Hex3
         '
+        Me.Hex3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hex3.Location = New System.Drawing.Point(308, 82)
         Me.Hex3.Name = "Hex3"
         Me.Hex3.ReadOnly = True
@@ -426,6 +430,7 @@ Partial Class Form1
         '
         'Hex4
         '
+        Me.Hex4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hex4.Location = New System.Drawing.Point(308, 105)
         Me.Hex4.Name = "Hex4"
         Me.Hex4.ReadOnly = True
@@ -435,6 +440,7 @@ Partial Class Form1
         '
         'Hex5
         '
+        Me.Hex5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Hex5.Location = New System.Drawing.Point(308, 128)
         Me.Hex5.Name = "Hex5"
         Me.Hex5.ReadOnly = True
@@ -445,6 +451,7 @@ Partial Class Form1
         'Red1
         '
         Me.Red1.BackColor = System.Drawing.Color.Red
+        Me.Red1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Red1.Location = New System.Drawing.Point(387, 36)
         Me.Red1.Name = "Red1"
         Me.Red1.ReadOnly = True
@@ -455,6 +462,7 @@ Partial Class Form1
         'Red2
         '
         Me.Red2.BackColor = System.Drawing.Color.Red
+        Me.Red2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Red2.Location = New System.Drawing.Point(387, 59)
         Me.Red2.Name = "Red2"
         Me.Red2.ReadOnly = True
@@ -465,6 +473,7 @@ Partial Class Form1
         'Red3
         '
         Me.Red3.BackColor = System.Drawing.Color.Red
+        Me.Red3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Red3.Location = New System.Drawing.Point(387, 82)
         Me.Red3.Name = "Red3"
         Me.Red3.ReadOnly = True
@@ -475,6 +484,7 @@ Partial Class Form1
         'Red4
         '
         Me.Red4.BackColor = System.Drawing.Color.Red
+        Me.Red4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Red4.Location = New System.Drawing.Point(387, 105)
         Me.Red4.Name = "Red4"
         Me.Red4.ReadOnly = True
@@ -485,6 +495,7 @@ Partial Class Form1
         'Red5
         '
         Me.Red5.BackColor = System.Drawing.Color.Red
+        Me.Red5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Red5.Location = New System.Drawing.Point(387, 128)
         Me.Red5.Name = "Red5"
         Me.Red5.ReadOnly = True
@@ -495,6 +506,7 @@ Partial Class Form1
         'Green1
         '
         Me.Green1.BackColor = System.Drawing.Color.Green
+        Me.Green1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Green1.Location = New System.Drawing.Point(431, 36)
         Me.Green1.Name = "Green1"
         Me.Green1.ReadOnly = True
@@ -505,6 +517,7 @@ Partial Class Form1
         'Green2
         '
         Me.Green2.BackColor = System.Drawing.Color.Green
+        Me.Green2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Green2.Location = New System.Drawing.Point(431, 59)
         Me.Green2.Name = "Green2"
         Me.Green2.ReadOnly = True
@@ -515,6 +528,7 @@ Partial Class Form1
         'Green3
         '
         Me.Green3.BackColor = System.Drawing.Color.Green
+        Me.Green3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Green3.Location = New System.Drawing.Point(431, 82)
         Me.Green3.Name = "Green3"
         Me.Green3.ReadOnly = True
@@ -525,6 +539,7 @@ Partial Class Form1
         'Green4
         '
         Me.Green4.BackColor = System.Drawing.Color.Green
+        Me.Green4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Green4.Location = New System.Drawing.Point(431, 105)
         Me.Green4.Name = "Green4"
         Me.Green4.ReadOnly = True
@@ -535,6 +550,7 @@ Partial Class Form1
         'Green5
         '
         Me.Green5.BackColor = System.Drawing.Color.Green
+        Me.Green5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Green5.Location = New System.Drawing.Point(431, 128)
         Me.Green5.Name = "Green5"
         Me.Green5.ReadOnly = True
@@ -545,6 +561,7 @@ Partial Class Form1
         'Blue1
         '
         Me.Blue1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Blue1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Blue1.Location = New System.Drawing.Point(475, 36)
         Me.Blue1.Name = "Blue1"
         Me.Blue1.ReadOnly = True
@@ -555,6 +572,7 @@ Partial Class Form1
         'Blue2
         '
         Me.Blue2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Blue2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Blue2.Location = New System.Drawing.Point(475, 59)
         Me.Blue2.Name = "Blue2"
         Me.Blue2.ReadOnly = True
@@ -565,6 +583,7 @@ Partial Class Form1
         'Blue3
         '
         Me.Blue3.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Blue3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Blue3.Location = New System.Drawing.Point(475, 82)
         Me.Blue3.Name = "Blue3"
         Me.Blue3.ReadOnly = True
@@ -575,6 +594,7 @@ Partial Class Form1
         'Blue4
         '
         Me.Blue4.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Blue4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Blue4.Location = New System.Drawing.Point(475, 105)
         Me.Blue4.Name = "Blue4"
         Me.Blue4.ReadOnly = True
@@ -585,6 +605,7 @@ Partial Class Form1
         'Blue5
         '
         Me.Blue5.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Blue5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Blue5.Location = New System.Drawing.Point(475, 128)
         Me.Blue5.Name = "Blue5"
         Me.Blue5.ReadOnly = True
@@ -604,7 +625,7 @@ Partial Class Form1
         '
         'Zoom
         '
-        Me.Zoom.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zoom.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Zoom.Location = New System.Drawing.Point(429, 230)
         Me.Zoom.Name = "Zoom"
         Me.Zoom.Size = New System.Drawing.Size(151, 21)
@@ -807,7 +828,7 @@ Partial Class Form1
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Colour Picker v1.4"
+        Me.Text = "Colour Picker v1.4.1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PixelSlider, System.ComponentModel.ISupportInitialize).EndInit()
