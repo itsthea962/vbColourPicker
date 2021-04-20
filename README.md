@@ -10,6 +10,6 @@ Use the betas at your own risk
 
 Feel free to use these files, just credit my GitHub page if you want :-)
 
-v1.5 is the latest, as seen below, it brings some new spicy customisation features as you can see (plus more other new features too)
+v1.5.1 is the latest, as seen below, it brings some new spicy customisation features as you can see (plus more other new features too)
 
 ![v1.5 PICTURE ONE](https://i.imgur.com/KloHwVK.png)
